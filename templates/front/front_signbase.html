@@ -1,0 +1,27 @@
+{% from 'common/_macros.html' import static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="{{ static('common/zlparam.js') }}"></script>
+    <script src="{{ static('common/md5/md5.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ static('front/css/front_signbase.css') }}">
+    {% include "common/_heads.html" %}
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="outer-box">
+        <div class="logo-box">
+            <a href="/">
+                <img src="{{ static('common/images/logo.png') }}" alt="">
+            </a>
+        </div>
+        <h2 class="page-title">{% block h2_block %}{% endblock %}</h2>
+        <div class="sign-box">
+            {% block body %}{% endblock %}
+        </div>
+        <span style="display: none;" id="return_to_span">{{ return_to }}</span>
+    </div>
+</body>
+</html>
