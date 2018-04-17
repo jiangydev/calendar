@@ -1,0 +1,225 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.container-fluid, .row, .sidebar, .index, .list, .desc{
+    height: 100%;
+}
+
+.sidebar, .index, .list, .desc{
+    padding: 0;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 110;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+/*============ sidebar ================*/
+.sidebar{
+    background-color: rgba(0, 9, 9, 0.68);
+    z-index: 111;
+}
+
+.nav li{
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebar a{
+    color: rgb(240, 246, 255);
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.sidebar li:hover,
+.sidebar li:focus,
+.sidebar li a:focus,
+.sidebar li a:hover{
+    background-color: #3D4343;
+}
+
+/*============= index =================*/
+.index{
+    background-color: rgb(38, 138, 128);
+}
+#index-greet{
+    font-size: 2em;
+    color: rgb(240, 247, 247);
+    padding-top: 20px;
+    padding-left: 12px;
+}
+
+#index-greet>.glyphicon{
+    font-size: 2em;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+
+.index-greet-content{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#morning{
+    font-weight: 600;
+}
+
+.word-after-greeting{
+    font-size: 0.5em;
+    position: relative;
+    top: -10px;
+    left: 4px;
+}
+
+#index-greet:hover,
+#index-greet:focus,
+#tasks:hover,
+#tasks:focus{
+    background-color: #85BAAD;
+}
+
+#tasks{
+    height: 100px;
+    border-top: 1px solid rgba(144, 218, 212, 0.53);
+    border-bottom: 1px solid rgba(144, 218, 212, 0.53);
+    padding-top: 20px;
+    padding-left: 25px;
+    color: rgb(240, 247, 247);
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+/*============== list ===================*/
+.list{
+    background-color: rgb(39, 130, 114);
+    padding-top: 2px;
+    overflow: hidden;
+}
+
+#listScroller #list-close{
+    background-color: rgb(39, 130, 114);
+    border-top: hidden;
+}
+button.close{
+    width: 40px;
+    height: 40px;
+}
+
+#listScroller {
+	position: absolute;
+    padding-right: 1px;
+    padding-left: 1px;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+#listScroller ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+#listScroller li {
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	background-color: #fafafa;
+	font-size: 14px;
+}
+
+/*============== desc ===================*/
+.desc{
+    background-color: #F7F7F7;
+    overflow: hidden;
+}
+
+.desc-header{
+    width: 100%;
+    height: 50px;
+}
+
+.desc-title{
+    color: #333333;
+    font-size: 2em;
+    margin: 5px;
+}
+
+.close{
+    width: 50px;
+    height: 50px;
+    outline: none;
+}
+
+.close>span{ font-size: 2em; }
+
+.desc label{
+    color: #C3C3D4;
+    font-size: 1.5em;
+    margin-left: 12px;
+}
+
+.desc input[type='text']{
+    width: 70%;
+    margin-left: 10px;
+}
+
+textarea.form-control{
+    margin-left: 12px;
+    width: 90%;
+}
+
+.choice {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#desc-submit, #desc-delete{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 25px;
+    width: 35%;
+}
+
+.placetaker{
+    float: right;
+    width: 10%;
+}
+
+/*=========== add task button =============*/
+.addtask-btn{
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    position: absolute;
+    bottom: 5px;
+    right: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*=========== calendar custom =============*/

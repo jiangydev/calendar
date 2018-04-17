@@ -1,0 +1,232 @@
+{% from 'common/_macros.html' import static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        {% include 'common/_heads.html' %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>index</title>
+        <link rel="stylesheet" href="{{ static('common/normalize.css') }}">
+        <link rel="stylesheet" href="{{ static('front/css/front_index.css') }}">
+        <!--复选框美化-->
+        <link rel="stylesheet" href="{{ static('common/labelauty/jquery-labelauty.css') }}">
+        <!--时间选择器-->
+        <link rel="stylesheet" href="{{ static('common/mobiscroll/style/mobiscroll.2.13.2.css') }}">
+        <!--fullcalendar-->
+        <link rel="stylesheet" href="{{ static('common/fullcalendar/fullcalendar.min.css') }}">
+    </head>
+    <body>
+        <!--mask-->
+        <div class="mask hidden-xs hidden-sm hidden-md hidden-lg"></div>
+        <!-- 页面总容器 -->
+        <div class="container-fluid">
+            <div class="row">
+                <!--sidebar-->
+                <div class="sidebar col-md-2 col-sm-4 col-xs-6 hidden-xs hidden-sm">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="h2"><a href="">Calendar</a></li>
+                        <li class="h4 sidebar_nav_li" id="sidebar-li-schedule">
+                            <a href="">
+                                <span class="badge">12</span>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="h4 sidebar_nav_li" id="sidebar-li-day">
+                            <a href="">
+                                <span class="glyphicon glyphicon-tags icon"></span>
+                                Day
+                            </a>
+                        </li>
+                        <li class="h4 sidebar_nav_li" id="sidebar-li-week">
+                            <a href="">
+                                <span class="glyphicon glyphicon-tags icon"></span>
+                                Week
+                            </a>
+                        </li>
+                        <li class="h4 sidebar_nav_li" id="sidebar-li-month">
+                            <a href="">
+                                <span class="glyphicon glyphicon-tags icon"></span>
+                                Month
+                            </a>
+                        </li>
+                        <li class="h4 sidebar_nav_li">
+                            <a href="">
+                                <span class="glyphicon glyphicon-user icon"></span>
+                                Setting
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--退出登陆-->
+                    <li>
+                        <button type="button" class="btn btn-lg btn-primary">
+                            <span class="glyphicon glyphicon-off"></span>
+                            Logout
+                        </button>
+                    </li>
+                </div>
+                <!--index-->
+                <div class="index col-md-3 col-sm-6 col-xs-12">
+                    <div id="index-greet">
+                        <div class="glyphicon glyphicon-magnet"></div>
+                        <div class="index-greet-content">
+                            <p id="morning">Good <span id="index_timePeriod">morning!</span></p>
+                            <p class="word-after-greeting">Today you have:</p>
+                        </div>
+                    </div>
+
+                    <div id="tasks">
+                        <span class="glyphicon glyphicon-check"></span>
+                        <span id="num-task">12 </span>
+                        tasks
+                    </div>
+
+                    <!--add task button-->
+                    <div class="addtask-btn" data-toggle="modal" data-target="#myModal">
+                        <img src="{{ static('common/images/add_task_button.png') }}" alt="">
+                    </div>
+                </div>
+                <!--list-->
+                <div class="list col-md-3 col-sm-6 col-xs-12 hidden-xs">
+                    <div id="listScroller">
+                        <ul>
+                            <li id="list-close" class="hidden-sm hidden-md hidden-lg">
+                                <button type="button" class="close" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </li>
+                            <li>Pretty row 1</li>
+                            <li>Pretty row 2</li>
+                            <li>Pretty row 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--desc-->
+                <div class="desc col-md-4 col-sm-6 col-xs-12 hidden-xs hidden-sm">
+                    <div id="descScroller">
+                        <div class="desc-header">
+                            <span class="desc-title">description</span>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="desc_name">name</label>
+                                <input type="text" class="form-control" id="desc_name" placeholder="年轻人少熬夜">
+                            </div>
+                            <div class="settings" style="display:none;">
+                            <!--日期时间选择控件-->
+                                <select name="demo" id="demo">
+                                    <option value="date">日期</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="desc_starttime">from</label>
+                                <!--class demo-test-datetime为时间选择插件样式类-->
+                                <input type="text" class="form-control demo-test-datetime" id="desc_starttime"  name="test" placeholder="开始时间">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc_endtime">to</label>
+                                <input type="text" class="form-control demo-test-datetime" id="desc_endtime" placeholder="结束时间">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc_alerttime">reminder</label>
+                                <input type="text" class="form-control demo-test-datetime" id="desc_alerttime" placeholder="提醒时间">
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="desc_email" data-labelauty="no email|email alert"  checked>
+                                <input type="checkbox" id="desc_sms" data-labelauty="no message|message alert">
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="desc_allday" data-labelauty="no all day|all day">
+                                <input type="checkbox" id="desc_finish"  data-labelauty="unfinishied|finished">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc_content">content</label>
+                                <textarea class="form-control" id="desc_content" rows="10" placeholder="young man, do not stay up late"></textarea>
+                            </div>
+                        </form>
+                        <div class="choice">
+                            <button type="button" class="btn btn-danger" id="desc-delete">Delete</button>
+                            <button type="button" class="btn btn-primary" id="desc-submit">Submit</button>
+                            <div class="placetaker"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--calendar-->
+                <div class="col-md-10 col-xs-12" id="calendar"></div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">description</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="modal_name">name</label>
+                                <input type="text" class="form-control" id="modal_name" placeholder="年轻人少熬夜">
+                            </div>
+                            <div class="settings" style="display:none;">
+                            <!--日期时间选择控件-->
+                                <select name="demo" >
+                                    <option value="date">日期</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="modal_starttime">from</label>
+                                <!--class demo-test-datetime为时间选择插件样式类-->
+                                <input type="text" class="form-control demo-test-datetime" id="modal_starttime"  name="test" placeholder="开始时间">
+                            </div>
+                            <div class="form-group">
+                                <label for="modal_endtime">to</label>
+                                <input type="text" class="form-control demo-test-datetime" id="modal_endtime" placeholder="结束时间">
+                            </div>
+                            <div class="form-group">
+                                <label for="modal_alerttime">reminder</label>
+                                <input type="text" class="form-control demo-test-datetime" id="modal_alerttime" placeholder="提醒时间">
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="modal_email" value="email" data-labelauty="no email|email alert" checked>
+                                <input type="checkbox" id="modal_sms" value="sms" data-labelauty="no message|message alert">
+                                <input type="checkbox" id="modal_allday" data-labelauty="no all day|all day">
+                                <input type="checkbox" id="modal_finish"  data-labelauty="unfinishied|finished">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc_content">content</label>
+                                <textarea class="form-control" id="modal_content" rows="10" placeholder="young man, do not stay up late" style="margin-left: 0"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="overflow: hidden">
+                        <button type="button" class="btn btn-danger" id="modal-delete" style="float: left;">delete</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="modal-submit">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--以下为js代码-->
+        <!--复选框美化-->
+        <script src="{{ static('common/labelauty/jquery-labelauty.js') }}"></script>
+        <!--iscroll-->
+        <script src="{{ static('common/iscroll.js') }}"></script>
+        <!--mobiscroll-->
+        <script src="{{ static('common/mobiscroll/script/mobiscroll.2.13.2.js') }}"></script>
+        <!--moment.js-->
+        <script src="{{ static('common/moment.js') }}"></script>
+        <!--fullcalendar-->
+        <script src="{{ static('common/fullcalendar/fullcalendar.min.js') }}"></script>
+        <!--自定义JS-->
+        <script src="{{ static('front/js/front_index.js') }}"></script>
+    </body>
+</html>

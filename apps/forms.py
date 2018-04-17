@@ -6,6 +6,7 @@
 from wtforms import Form
 
 class BaseForm(Form):
+
     def get_error(self):
         '''
         虽然可能有多条错误信息，但只显示一条
