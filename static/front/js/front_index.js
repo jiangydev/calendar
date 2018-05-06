@@ -560,6 +560,7 @@ function render_listItems(tasks) {
 function render_list() {
     $list_ul.text('');
     $list_ul.append($listClose);
+    $list.find('.close').click(hideList);
     AjaxGetTasks(render_listItems);
 }
 

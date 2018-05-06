@@ -12,8 +12,8 @@ def login_required(func):
 
     @wraps(func)
     def inner(*args, **kwargs):
-        if config.CMS_USER_ID in session:
+        if config.FRONT_USER_ID in session:
             return func(*args, **kwargs)
         else:
-            return redirect(url_for('cms.login'))
+            return redirect(url_for('front.signin'))
     return inner

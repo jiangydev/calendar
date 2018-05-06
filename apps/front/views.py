@@ -16,6 +16,7 @@ from .forms import SignupForm, SigninForm, NewtaskForm, ModifyTaskForm, DelTaskF
 from .models import FrontUser, Task
 import config
 from datetime import datetime
+from .decorators import login_required
 
 
 bp = Blueprint('front', __name__)
@@ -28,6 +29,7 @@ def helloworld():
 前端主界面视图
 '''
 @bp.route('/')
+@login_required
 def index():
     return render_template('front/front_index.html')
 

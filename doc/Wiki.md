@@ -186,3 +186,9 @@
   1. 将`AjaxDeleteTask()`绑定到delete按钮上，点击即删除信息
 
 - 注意：后期在app中，可以需要通过prompt提示框和语音识别服务传递信息，所以此处删除前暂不做提示框弹出，要求用户确认
+
+
+
+## 本次修改
+
+1. fix[front]: fix bug that can't close list part with list-close button after adding or deleting task
