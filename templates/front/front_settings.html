@@ -1,0 +1,85 @@
+{% from "common/_macros.html" import static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'common/_heads.html' %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>settings</title>
+    <link rel="stylesheet" href="{{ static('front/css/front_settings.css') }}">
+</head>
+<body>
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">课表设置</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">短信设置</a>
+        </li>
+        <li role="presentation"><a href="#email" aria-controls="email" role="tab" data-toggle="tab">邮箱设置</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            正在跳转回首页
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="start-date" class="col-xs-offset-1 col-xs-3 control-label">第一周周一</label>
+                    <div class="col-xs-7">
+                        <input type="date" class="form-control" id="start-date" placeholder="start date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="studentID" class="col-xs-offset-1 col-xs-3 control-label">学号</label>
+                    <div class="col-xs-7">
+                        <input type="text" class="form-control" id="studentID" placeholder="studentID">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd" class="col-xs-offset-1 col-xs-3 control-label">密码</label>
+                    <div class="col-xs-7">
+                        <input type="password" class="form-control" id="classPwd" placeholder="password here">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="classCaptcha" class="col-xs-offset-1 col-xs-3 control-label">验证码</label>
+                    <div class="col-xs-7">
+                        <input type="text" class="form-control" id="classCaptcha" placeholder="captcha">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-1 col-xs-7">
+                        <label>
+                            <img src="{{ url_for('front.classSchedule') }}" alt="验证码here" id="classCaptchaImg">
+                            <button class="btn btn-default" type="button" value="Input" id="refreshCaptcha">换一张</button>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-1 col-xs-10" id="div-submit">
+                        <label>
+                            <button class="btn btn-default" type="submit" value="Submit" id="classSubmit" style="float: right">提交</button>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+            这里是短信设置
+        </div>
+        <div role="tabpanel" class="tab-pane" id="email">
+            这里是邮箱设置
+        </div>
+    </div>
+
+</div>
+<script src="{{ static('common/zlparam.js') }}"></script>
+<script src="{{ static('front/js/front_settings.js') }}"></script>
+</body>
+</html>

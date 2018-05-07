@@ -8,15 +8,20 @@ from flask import (
     session,
     url_for,
     g,
-    jsonify
+    jsonify,
+    make_response
 )
-from utils import restful, safeutils
-from exts import db
-from .forms import SignupForm, SigninForm, NewtaskForm, ModifyTaskForm, DelTaskForm
+from utils import restful, safeutils, zlcache
+from utils.classUtils import ZhengfangSpider, Lesson
+from exts import db, mongo
+from .forms import SignupForm, SigninForm, NewtaskForm, ModifyTaskForm, DelTaskForm, ClassScheduleForm
 from .models import FrontUser, Task
 import config
 from datetime import datetime
 from .decorators import login_required
+from lxml import etree
+from io import BytesIO
+from uuid import uuid4
 
 
 bp = Blueprint('front', __name__)
@@ -99,7 +104,6 @@ def newtask():
     form = NewtaskForm(request.form)
     if form.validate():
         task_args = form.getTrueValue()
-
         task = Task(**task_args)
         db.session.add(task)
         db.session.commit()
@@ -192,6 +196,140 @@ def tasks():
 
     return jsonify({'code': 200, 'data': tasks})
 
+'''
+个人信息设置页面
+'''
+@bp.route('/settings/')
+# @login_required
+def settings():
+    return render_template('front/front_settings.html')
+
+'''
+课表设置接口
+'''
+class ClassSchedule(views.MethodView):
+    def get(self):
+        id = request.args.get('xx')
+        print('id:', id)
+        # if id:
+        #     id = uuid4()
+        # else:
+        #     id = str(id)
+
+        spider = ZhengfangSpider()
+        spider.prelogin()
+
+        if id:
+            viewstate = spider.getviewstate()
+            a = zlcache.set(str(id), viewstate, 120)
+
+        captchaBin = spider.getCaptchaBin()
+        captchaByte = BytesIO(captchaBin)
+        resp = make_response(captchaByte.read())
+        resp.content_type = 'image/gif'
+        return resp
+
+
+    def post(self):
+        form = ClassScheduleForm(request.form)
+        if form.validate():
+            startDate = form.startDate.data
+            studentID = form.studentID.data
+            password = form.password.data
+            classCaptcha = form.classCaptcha.data
+            print(startDate, studentID, password, classCaptcha)
+
+            # 爬取内容
+            spider = ZhengfangSpider(studentNum=studentID, password=password)
+            # spider.setViewstate(zlcache.get())
+            spider.login(classCaptcha)
+            page_content = spider.getClassSchedule()
+
+
+            # 解析并存储
+            collection = mongo.db.flask
+            # user_tel = g.user.telephone
+
+            # 构造html解析器
+            parser = etree.HTMLParser(encoding='utf-8')
+            html = etree.HTML(page_content, parser=parser)
+
+            # 获取课程信息所在td标签
+            tds = html.xpath("//tr[position()>2]/td[@align='Center']//text()")
+            if len(tds) == 0:
+                # raise ValueError('get classSchedule fail')
+                return restful.server_error(message='爬取或解析课表过程出错')
+
+            # 取出列表中无用杂项
+            for i in range(0, tds.count('\xa0')):
+                tds.remove('\xa0')
+
+            print(tds)
+
+            def saveLessons(times, name):
+                '''saveLessons
+                获取课程信息，并将其存入mongoDB数据库
+                :param times: [list] 课程时间列表，包含一节课的周次、每周周几、一天第几节
+                    e.g. ('week1', 'day1', 1)
+                :param name: [str] 课程名称，e.g. 机器人视觉@南B309
+                :return: result [boolean] True: 保存成功， False: 保存失败
+                '''
+                for time in times:
+                    # time : e.g. ('week1', 'day1', 1)
+                    weekClass = collection.find_one({'user_tel': user_tel, 'week': time[0]})
+                    if not weekClass:
+                        # 该周信息尚未登记
+                        new_weekClass = {
+                            'user_tel': user_tel,
+                            'week': time[0],
+                            'day1': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day2': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day3': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day4': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day5': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day6': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            'day7': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        }
+                        new_weekClass[time[1]][time[2] - 1] = name
+                        try:
+                            collection.insert_one(new_weekClass).inserted_id
+                        except:
+                            print('save fail when {}, with the document does not exist before'.format(str(time)))
+                            return False
+                    else:
+                        day = weekClass[time[1]]
+                        day[time[2] - 1] = name
+                        try:
+                            collection.update_one({
+                                'user_tel': user_tel,
+                                'week': time[0],
+                            },
+                                {'$set': {time[1]: day}}
+                            )
+                        except:
+                            print('save fail when {}, with the document exist before'.format(str(time)))
+                            return False
+
+                return True
+
+            index = 0
+            while index < len(tds):
+                singleLesson = Lesson(name=tds[index], type=tds[index + 1], time=tds[index + 2], teacher=tds[index + 3],
+                                      address=tds[index + 4])
+                print(singleLesson)
+                if saveLessons(singleLesson.getTime(), singleLesson.getName() + '@' + singleLesson.getAddress()):
+                    index += 5
+                else:
+                    print('save fail in loop')
+                    return restful.server_error(message='存入数据库时发生错误')
+
+            return restful.success()
+        else:
+            return restful.params_error(message=form.get_error())
+
+
+
 
 bp.add_url_rule('/signup/', view_func=SignupView.as_view('signup'))
 bp.add_url_rule('/signin/', view_func=SigninView.as_view('signin'))
+bp.add_url_rule('/classSchedule/', view_func=ClassSchedule.as_view('classSchedule'))

@@ -1,0 +1,15 @@
+
+/* ============= 课表设定部分 ==========*/
+.tab-content {
+    margin-top: 20px;
+}
+
+.form-group label,
+.form-group div{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#div-submit{
+    text-align: right;
+}
