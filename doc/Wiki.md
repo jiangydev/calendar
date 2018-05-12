@@ -192,3 +192,6 @@
 ## 本次修改
 
 1. fix[front]: fix bug that can't close list part with list-close button after adding or deleting task
+2. feat[front]: add function of get and store class schedule
+3. feat[front]: add support for voice input on mobile phone
+4. ​

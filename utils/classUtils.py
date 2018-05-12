@@ -1,12 +1,13 @@
-# mencoding: utf-8
+#encoding: utf-8
 
-import re
+import re, time, os
 import requests
-import time
 from lxml import etree
 from PIL import Image
 from io import BytesIO
 from urllib import parse
+from shortuuid import uuid
+from utils.ruokuai import rc
 
 class ZhengfangSpider:
     '''
@@ -32,7 +33,7 @@ class ZhengfangSpider:
     '''
 
 
-    def __init__(self, studentNum='123456789', password='123456789', baseUrl='http://jwjx.njit.edu.cn'):
+    def __init__(self, studentNum, password, baseUrl='http://jwjx.njit.edu.cn'):
         self.studentNum = studentNum
         self.password = password
         self.baseUrl = baseUrl
@@ -46,48 +47,46 @@ class ZhengfangSpider:
         VIEWSTATE = html.xpath("//input[@name='__VIEWSTATE']//@value")[0]
         return VIEWSTATE
 
-    def identifyCaptcha(self, captchaBin):
+    def identifyCaptcha(self, captchaResp):
         '''
         identifyCaptcha(self, captchaResp):
         识别验证码图片，根据识别方式不同，可以重写此方法
         :param captchaResp: [requests.models.Response] 请求验证码接口后的返回信息,其内容为可以解析成gif格式的图pain
         :return: [str] 识别的验证码字符串
         '''
+        captchaBin = captchaResp.content
         img = Image.open(BytesIO(captchaBin))
-        img.save('001.gif')
+        name = str(uuid())
+        img.save('./rc_imgData/' + name + '.gif')
+        im = open('./rc_imgData/' + name + '.gif', 'rb').read()
         # 手动输入验证码
-        captcha = input("input the captcha here: ")
+        # captcha = input("input the captcha here: ")
+        captcha = rc.rk_create(im, 3040)['Result']
+        os.remove('./rc_imgData/' + name + '.gif')
+        print('catpcha: ', captcha)
         return captcha
 
-    def prelogin(self):
-        ''' 获取登录界面信息，验证码'''
-        # 取得登录界面
-        self.loginUrl = self.baseUrl + '/Default2.aspx'
-        response = self.session.get(self.loginUrl)
-        time.sleep(0.1)  # suspend 0.1 second from requests crash
-        self.__VIEWSTATE = self.parseVIEWSTATE(response)
+    def login(self):
+        # 取得登录界面信息
+        loginUrl = self.baseUrl + '/Default2.aspx'
+        response = self.session.get(loginUrl)
+        time.sleep(0.1) # suspend 0.1 second from requests crash
+        __VIEWSTATE = self.parseVIEWSTATE(response)
         # 获取验证码信息
         imgUrl = self.baseUrl + '/CheckCode.aspx?'
         imgResponse = self.session.get(imgUrl)
         time.sleep(0.1)
         if imgResponse.status_code == requests.codes.ok:
-            self.captchaBin = imgResponse.content
+            captcha = self.identifyCaptcha(imgResponse)
         else:
             print('request captcha fail')
             return False
-
-    def login(self, captcha=''):
-        self.loginUrl = self.baseUrl + '/Default2.aspx'
-        if captcha == '':
-            captcha = self.identifyCaptcha(self.captchaBin)
-        else:
-            captcha = captcha
 
         # 构造登录Post请求数据
         RadioButtonList1 = u"学生".encode('gb2312', 'replace')
         data = {
             "RadioButtonList1": RadioButtonList1,
-            "__VIEWSTATE": self.__VIEWSTATE,
+            "__VIEWSTATE": __VIEWSTATE,
             "txtUserName": self.studentNum,
             "Textbox1": "",
             "TextBox2": self.password,
@@ -99,7 +98,7 @@ class ZhengfangSpider:
         }
 
         # 请求登录
-        loginResponse = self.session.post(self.loginUrl, data=data)
+        loginResponse = self.session.post(loginUrl, data=data)
         time.sleep(0.1)
         if loginResponse.status_code == requests.codes.ok:
             print('login ZhengFang successfully')
@@ -142,20 +141,6 @@ class ZhengfangSpider:
         time.sleep(0.1)
         return classResponse.text
 
-    def getCaptchaBin(self):
-        return self.captchaBin
-
-    def setId(self, id):
-        self.studentNum = id
-
-    def setPwd(self, pwd):
-        self.password = pwd
-
-    def getviewstate(self):
-        return self.__VIEWSTATE
-
-    def setViewstate(self, raw):
-        self.__VIEWSTATE = raw
 
 class Lesson():
     '''Lesson

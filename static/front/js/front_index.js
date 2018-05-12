@@ -17,7 +17,8 @@ var $sidebar = $('.sidebar'),
     $addtask_btn = $('.addtask-btn'), // add task button
     $list_ul = $list.find('ul'), // list中展示task的ul
     $desc_submit = $('#desc-submit'), // desc中提交按钮
-    $modal_submit = $('#modal-submit'); // modal中提交按钮
+    $modal_submit = $('#modal-submit'), // modal中提交按钮
+    $modal_close = $('#modal_close'); // modal中关闭按钮
 
 var deviceType_var = deviceType(),
     tasks = []; // 用于存放tasks
@@ -46,6 +47,8 @@ function init_plugins(){
         defaultView: 'month',
         // 视图头部行布局
         header: ifsidebarBtn(),
+        //每周从周一开始, note: 还要设置时区，见文档
+        // fitstDay: 1,
         // 自定义按钮，用于唤出sidebar
         customButtons: {
             sidebarBtn: {
@@ -68,10 +71,33 @@ function init_plugins(){
                         'success': function (data) {
                             var events = [];
                             if (data['code'] === 200) {
-                                events = data['data']
+                                events = data['data'];
                                 callback(events);
                             } else {
                                 zlalert.alertErrorToast('获取日程失败');
+                            }
+                        },
+                        'fail': function (error) {
+                            zlalert.alertNetworkError();
+                        }
+                    });
+                }
+            },
+            {
+                events: function (start, end, timezone, callback) {
+                    zlajax.post({
+                        'url': '/lessons/',
+                        'data': {
+                            // week_of_year-day_of_week
+                            'start': start.format('w-E'),
+                            'end': end.format('w-E')
+                        },
+                        'success': function (data) {
+                            var events = [];
+                            if (data['code'] === 200) {
+                                events = data['data'];
+                            } else {
+                                zlalert.alertErrorToast('获取课程失败');
                             }
                         },
                         'fail': function (error) {
@@ -146,7 +172,16 @@ function bind_functions() {
 
 
     // 点击addtask_btn,即新建日程前，清空desc中表单
-    $addtask_btn.click(clearForm);
+    // $addtask_btn.click(clearForm);
+    $addtask_btn.click(function () {
+    	clearForm();
+    	showFab();
+    });
+    // 模态框关闭时隐藏语音识别按钮
+    $modal_close.click(function () {
+    	clearForm();
+    	hideFab();
+    });
 
 
     // sidebar磁贴用于不同视图间切换
@@ -201,6 +236,21 @@ function bind_functions() {
 /**
  * ============ 页面变化逻辑函数 ===================
  */
+
+/**
+ * showFab() & hideFab()
+ */
+function showFab() {
+    if (deviceType_var !== 'pc') {
+        $.globalEval(app_obj.showFab());
+    }
+}
+
+function hideFab() {
+    if (deviceType_var !== 'pc') {
+        $.globalEval(app_obj.hideFab());
+    }
+}
 
 /**
  * deviceType()

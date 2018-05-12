@@ -192,4 +192,4 @@ class ClassScheduleForm(BaseForm):
     startDate = StringField(validators=[InputRequired(message="未选择第一周周一日期")])
     studentID = StringField(validators=[Length(9, 9, message='学号格式错误')])
     password = StringField(validators=[InputRequired(message="未输入密码")])
-    classCaptcha = StringField(validators=[Length(4, 4, message='验证码格式错误')])
+    # classCaptcha = StringField(validators=[Length(4, 4, message='验证码格式错误')])

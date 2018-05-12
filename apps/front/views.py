@@ -8,8 +8,7 @@ from flask import (
     session,
     url_for,
     g,
-    jsonify,
-    make_response
+    jsonify
 )
 from utils import restful, safeutils, zlcache
 from utils.classUtils import ZhengfangSpider, Lesson
@@ -20,8 +19,7 @@ import config
 from datetime import datetime
 from .decorators import login_required
 from lxml import etree
-from io import BytesIO
-from uuid import uuid4
+
 
 
 bp = Blueprint('front', __name__)
@@ -140,6 +138,7 @@ def modtask():
     else:
         return restful.params_error(message=form.get_error())
 
+
 @bp.route('/deltask/', methods=['POST'])
 def deltask():
     form = DelTaskForm(request.form)
@@ -200,7 +199,7 @@ def tasks():
 个人信息设置页面
 '''
 @bp.route('/settings/')
-# @login_required
+@login_required
 def settings():
     return render_template('front/front_settings.html')
 
@@ -208,27 +207,9 @@ def settings():
 课表设置接口
 '''
 class ClassSchedule(views.MethodView):
+    decorators = [login_required]
     def get(self):
-        id = request.args.get('xx')
-        print('id:', id)
-        # if id:
-        #     id = uuid4()
-        # else:
-        #     id = str(id)
-
-        spider = ZhengfangSpider()
-        spider.prelogin()
-
-        if id:
-            viewstate = spider.getviewstate()
-            a = zlcache.set(str(id), viewstate, 120)
-
-        captchaBin = spider.getCaptchaBin()
-        captchaByte = BytesIO(captchaBin)
-        resp = make_response(captchaByte.read())
-        resp.content_type = 'image/gif'
-        return resp
-
+        pass
 
     def post(self):
         form = ClassScheduleForm(request.form)
@@ -236,19 +217,18 @@ class ClassSchedule(views.MethodView):
             startDate = form.startDate.data
             studentID = form.studentID.data
             password = form.password.data
-            classCaptcha = form.classCaptcha.data
-            print(startDate, studentID, password, classCaptcha)
+            # classCaptcha = form.classCaptcha.data
+            print(startDate, studentID, password)
 
             # 爬取内容
             spider = ZhengfangSpider(studentNum=studentID, password=password)
-            # spider.setViewstate(zlcache.get())
-            spider.login(classCaptcha)
+            spider.login()
             page_content = spider.getClassSchedule()
 
 
             # 解析并存储
             collection = mongo.db.flask
-            # user_tel = g.user.telephone
+            user_tel = g.front_user.telephone
 
             # 构造html解析器
             parser = etree.HTMLParser(encoding='utf-8')
@@ -264,7 +244,7 @@ class ClassSchedule(views.MethodView):
             for i in range(0, tds.count('\xa0')):
                 tds.remove('\xa0')
 
-            print(tds)
+            # print(tds)
 
             def saveLessons(times, name):
                 '''saveLessons
@@ -312,20 +292,83 @@ class ClassSchedule(views.MethodView):
 
                 return True
 
+            # 存放课表信息
             index = 0
             while index < len(tds):
-                singleLesson = Lesson(name=tds[index], type=tds[index + 1], time=tds[index + 2], teacher=tds[index + 3],
-                                      address=tds[index + 4])
-                print(singleLesson)
+                singleLesson = Lesson(name=tds[index], type=tds[index + 1], time=tds[index + 2], teacher=tds[index + 3], address=tds[index + 4])
+                # print(singleLesson)
                 if saveLessons(singleLesson.getTime(), singleLesson.getName() + '@' + singleLesson.getAddress()):
                     index += 5
                 else:
                     print('save fail in loop')
                     return restful.server_error(message='存入数据库时发生错误')
 
+            def saveWeekCalibration():
+                # 存放开学第一周是本年度第几周
+                firstWeek = collection.find_one({
+                    'user_tel': user_tel,
+                    'type': 'weekCalibration'
+                })
+                if not firstWeek:
+                    # 尚未记录
+                    new_firstWeek = {
+                        'user_tel': user_tel,
+                        'type': 'weekCalibration',
+                        'firstWeek': startDate
+                    }
+                    try:
+                        collection.insert_one(new_firstWeek).inserted_id
+                    except:
+                        print('save fail with firstweek, with the document does not exist before')
+                        return False
+                else:
+                    try:
+                        a = collection.update_one({
+                            'user_tel': user_tel,
+                            'type': 'weekCalibration',
+                        },
+                            {'$set': {'firstWeek': startDate}}
+                        )
+                    except:
+                        print('save fail with firstweek, with the document exist before')
+                        return False
+
+                return True
+
+            # 标定第一周
+            if not saveWeekCalibration():
+                return restful.server_error(message='第一周标定失败')
+
             return restful.success()
         else:
             return restful.params_error(message=form.get_error())
+
+'''
+邮箱设置接口
+'''
+@bp.route('/emailSetting/', methods=['POST'])
+def emailSetting():
+    email = request.form.get('email')
+    if email:
+        print('email: ', email)
+        user = g.front_user
+        user.email = email
+        db.session.commit()
+        return restful.success()
+    else:
+        return restful.params_error(message='邮箱格式错误')
+
+'''
+课表获取接口
+'''
+@bp.route('/lessons/', methods=['POST'])
+def lessons():
+    startdate = request.form.get('start')
+    enddate = request.form.get('end')
+    print('start: ', startdate)
+    print('end: ', enddate)
+
+    return restful.success()
 
 
 

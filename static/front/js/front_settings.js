@@ -10,14 +10,14 @@ $(function () {
         zlajax.post({
             'url': '/classSchedule/',
             'data': {
-                'startDate': startDate,
+                'startDate': moment(startDate, 'YYYY-MM-DD').format('w'),
                 'studentID': studentID,
                 'password': password,
                 'classCaptcha': classCaptcha
             },
             'success': function (data) {
                 if (data['code'] === 200) {
-                    zlalert.alertSuccessToast('课表添加成功');
+                    zlalert.alertSuccess('课表添加成功');
                 } else {
                     zlalert.alertInfo(data['message']);
                 }
@@ -28,15 +28,28 @@ $(function () {
         })
     });
 
-    // 更新验证码
-    function refreshCaptcha(event) {
-        var $self = $('#classCaptchaImg');
-        var src = $self.attr('src');
-        var newsrc = zlparam.setParam(src, 'xx', Math.ceil(Math.random()*10000));
-        $self.attr('src', newsrc);
-    }
-    $('#refreshCaptcha').click(refreshCaptcha);
-    refreshCaptcha();
+   // 邮箱添加部分提交AJAX
+    $('#emailSubmit').click(function (event) {
+        event.preventDefault();
+        var email = $('#new-email').val();
+
+        zlajax.post({
+            'url': '/emailSetting/',
+            'data': {
+                'email': email
+            },
+            'success': function (data) {
+                if (data['code'] === 200) {
+                    zlalert.alertSuccess('邮箱添加成功');
+                } else {
+                    zlalert.alertInfo(data['message'])
+                }
+            },
+            'fail': function (error) {
+                zlalert.alertNetworkError();
+            }
+        });
+    })
 
 
 });
