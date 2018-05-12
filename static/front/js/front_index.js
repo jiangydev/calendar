@@ -63,9 +63,10 @@ function init_plugins(){
         // 显示当前时间指示器
         nowIndicator: true,
         eventSources: [
-            // 普通日程
             {
+                id: 'normal',
                 events: function (start, end, timezone, callback) {
+                    // 普通日程
                     zlajax.get({
                         'url': '/tasks/',
                         'success': function (data) {
@@ -81,21 +82,19 @@ function init_plugins(){
                             zlalert.alertNetworkError();
                         }
                     });
-                }
-            },
-            {
-                events: function (start, end, timezone, callback) {
+                    // 课表
                     zlajax.post({
                         'url': '/lessons/',
                         'data': {
                             // week_of_year-day_of_week
-                            'start': start.format('w-E'),
-                            'end': end.format('w-E')
+                            'start': start.format('YYYY-M-D'),
+                            'end': end.format('YYYY-M-D')
                         },
                         'success': function (data) {
                             var events = [];
                             if (data['code'] === 200) {
                                 events = data['data'];
+                                callback(events);
                             } else {
                                 zlalert.alertErrorToast('获取课程失败');
                             }
@@ -105,6 +104,7 @@ function init_plugins(){
                         }
                     });
                 }
+
             }
         ]
     });

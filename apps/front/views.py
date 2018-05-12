@@ -12,6 +12,7 @@ from flask import (
 )
 from utils import restful, safeutils, zlcache
 from utils.classUtils import ZhengfangSpider, Lesson
+from utils.cal_weekday import WeekdayCal
 from exts import db, mongo
 from .forms import SignupForm, SigninForm, NewtaskForm, ModifyTaskForm, DelTaskForm, ClassScheduleForm
 from .models import FrontUser, Task
@@ -343,6 +344,65 @@ class ClassSchedule(views.MethodView):
         else:
             return restful.params_error(message=form.get_error())
 
+
+'''
+课表获取接口
+'''
+@bp.route('/lessons/', methods=['POST'])
+def lessons():
+    startdate_str = request.form.get('start')
+    enddate_str = request.form.get('end')
+
+    collection = mongo.db.flask
+    user_tel = g.front_user.telephone
+
+    termStart_str = collection.find_one({
+                    'user_tel': user_tel,
+                    'type': 'weekCalibration'
+                })
+    lessons = []
+
+    def tran_lesson(daylessonDB):
+        '''
+        tran_lesson(daylessonDB)
+        transform the form of lesson information from DB_stored to fullCalendar plugin required
+        e.g. [0, 0, 'python'] ==> [{lesson python info}, ...]
+        :param daylessonDB: lesson list of a day in mongoDB
+        :return: list of fullCalendar plugin task items
+        '''
+
+
+
+    try:
+        starttime = datetime.strptime(startdate_str, '%Y-%m-%d')
+        endtime = datetime.strptime(enddate_str, '%Y-%m-%d')
+        durationSeconds = (endtime - starttime).total_seconds()
+        if durationSeconds < (60 * 60 * 24 * 7):
+            # 查询时间跨度小于1周，即查询一天的课表
+            weekCalculator = WeekdayCal(termStart_str)
+            # 第几周周几信息
+            weektime = weekCalculator.getWeekday(startdate_str)
+            weeklessonsDB = collection.find_one({
+                'user_tel': user_tel,
+                'week': 'week'+weektime['week']
+            })
+            if not weeklessonsDB:
+                daylessonDB = weeklessonsDB['day'+weektime['weekday']]
+            else:
+                # 没有找到这一周的课程
+                return restful.params_error(message='查找一天课程时出错')
+        elif durationSeconds < (60 * 60 * 24 * 20):
+            # 查询的时间跨度小于20天，即查询的是一周的课表
+            pass
+        else:
+            # 查询的是一个月的课表
+            pass
+    except:
+        return restful.server_error(message='查找课程时出现了异常')
+
+    return jsonify({'code': 200, 'data': lessons})
+
+
 '''
 邮箱设置接口
 '''
@@ -358,17 +418,7 @@ def emailSetting():
     else:
         return restful.params_error(message='邮箱格式错误')
 
-'''
-课表获取接口
-'''
-@bp.route('/lessons/', methods=['POST'])
-def lessons():
-    startdate = request.form.get('start')
-    enddate = request.form.get('end')
-    print('start: ', startdate)
-    print('end: ', enddate)
 
-    return restful.success()
 
 
 

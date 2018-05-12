@@ -189,6 +189,24 @@
 
 
 
+
+## 课程表逻辑
+
+### 展示
+
+1. 前端传递查询信息，格式如下：
+
+   ```
+   'start': '2018-5-12',
+   'end': '2018-05-13'
+   ```
+
+2. 后端接收后计算2项信息：
+
+   1. 接收到的时间区间包含具体那些天，输出`['2018-5-12', '2018-5-13']`
+   2. 具体某一天对应开学是第几周第几天，e.g. '2018-5-12' -> "{'week': 11, 'day':6}"
+
+
 ## 本次修改
 
 1. fix[front]: fix bug that can't close list part with list-close button after adding or deleting task

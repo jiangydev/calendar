@@ -10,7 +10,7 @@ $(function () {
         zlajax.post({
             'url': '/classSchedule/',
             'data': {
-                'startDate': moment(startDate, 'YYYY-MM-DD').format('w'),
+                'startDate': moment(startDate, 'YYYY-MM-DD').format('YYYY-M-D'),
                 'studentID': studentID,
                 'password': password,
                 'classCaptcha': classCaptcha
