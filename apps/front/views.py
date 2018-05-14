@@ -17,11 +17,12 @@ from exts import db, mongo
 from .forms import SignupForm, SigninForm, NewtaskForm, ModifyTaskForm, DelTaskForm, ClassScheduleForm
 from .models import FrontUser, Task
 import config
-from datetime import datetime
+from datetime import datetime, timedelta
 from .decorators import login_required
 from lxml import etree
 
 
+classtime = config.classtime
 
 bp = Blueprint('front', __name__)
 
@@ -359,46 +360,102 @@ def lessons():
     termStart_str = collection.find_one({
                     'user_tel': user_tel,
                     'type': 'weekCalibration'
-                })
+                })['firstWeek']
     lessons = []
 
-    def tran_lesson(daylessonDB):
-        '''
+    def tran_lesson(daylessonDB, timestr):
+        """
         tran_lesson(daylessonDB)
         transform the form of lesson information from DB_stored to fullCalendar plugin required
         e.g. [0, 0, 'python'] ==> [{lesson python info}, ...]
         :param daylessonDB: lesson list of a day in mongoDB
+        :param timestr: date string, e.g. '2018-2-26'
         :return: list of fullCalendar plugin task items
-        '''
+        """
 
+        dayLessons = []
+        for idx, lesson in enumerate(daylessonDB):
+            if lesson != 0:
+                lessonTimeStart = datetime.strptime(timestr+'-'+classtime[idx]['start'], '%Y-%m-%d-%H-%M').isoformat()
+                lessonTimeEnd = datetime.strptime(timestr+'-'+classtime[idx]['end'], '%Y-%m-%d-%H-%M').isoformat()
+                lessonItem = {
+                    'title': lesson,
+                    'start': lessonTimeStart,
+                    'end': lessonTimeEnd
+                }
+                dayLessons.append(lessonItem)
+
+        return dayLessons
+
+    def getWeekLessons(startdate_str):
+        """
+        get lesson schedule of a week.
+        :param startdate_str: time string of one day in that week
+        in form of '%Y-%m-%d', e.g. '2018-5-12'
+
+        :return: week data object from mongoDB
+        """
+        weekCalculator = WeekdayCal(termStart_str)
+        # 第几周周几信息
+        weekPosition = weekCalculator.getWeekday(startdate_str)
+        # 寻找所在周的数据
+        weeklessonsDB = collection.find_one({
+            'user_tel': user_tel,
+            'week': 'week' + str(weekPosition['week'])
+        })
+        return weeklessonsDB
 
 
     try:
         starttime = datetime.strptime(startdate_str, '%Y-%m-%d')
         endtime = datetime.strptime(enddate_str, '%Y-%m-%d')
         durationSeconds = (endtime - starttime).total_seconds()
-        if durationSeconds < (60 * 60 * 24 * 7):
+
+        if durationSeconds < (60 * 60 * 24 * 7): # 604, 800
             # 查询时间跨度小于1周，即查询一天的课表
             weekCalculator = WeekdayCal(termStart_str)
             # 第几周周几信息
-            weektime = weekCalculator.getWeekday(startdate_str)
+            weekPosition = weekCalculator.getWeekday(startdate_str)
+            # 寻找所在周的数据
             weeklessonsDB = collection.find_one({
                 'user_tel': user_tel,
-                'week': 'week'+weektime['week']
+                'week': 'week' + str(weekPosition['week'])
             })
-            if not weeklessonsDB:
-                daylessonDB = weeklessonsDB['day'+weektime['weekday']]
-            else:
-                # 没有找到这一周的课程
-                return restful.params_error(message='查找一天课程时出错')
+            if weeklessonsDB:
+                # 这一周的数据存在
+                # 如果不存在，可能是那一周课表没有课
+                daylessonsDB = weeklessonsDB['day'+str(weekPosition['weekday'])]
+                lessons = tran_lesson(daylessonsDB, startdate_str)
+
         elif durationSeconds < (60 * 60 * 24 * 20):
             # 查询的时间跨度小于20天，即查询的是一周的课表
-            pass
+            weeklessonsDB = getWeekLessons(startdate_str)
+            if weeklessonsDB:
+                # 这一天的数据存在
+                for i in range(1, 8):
+                    daylessonsDB = weeklessonsDB['day'+str(i)]
+                    lessons.extend(tran_lesson(daylessonsDB, starttime.strftime("%Y-%m-%d")))
+                    starttime += timedelta(days=1)
+            else:
+                # 如果不存在，可能是那一周课表没有课
+                starttime += timedelta(days=7)
         else:
-            # 查询的是一个月的课表
-            pass
-    except:
-        return restful.server_error(message='查找课程时出现了异常')
+            # 查询的是一个月或更多的课表
+            while (endtime-starttime).total_seconds() > 10:
+                # 周/月/更多的查询都是以一周为单位
+                weeklessonsDB = getWeekLessons(starttime.strftime("%Y-%m-%d"))
+                if weeklessonsDB:
+                    # 这一天的数据存在
+                    for i in range(1, 8):
+                        daylessonsDB = weeklessonsDB['day'+str(i)]
+                        lessons.extend(tran_lesson(daylessonsDB, starttime.strftime("%Y-%m-%d")))
+                        starttime += timedelta(days=1)
+                else:
+                    # 如果不存在，可能是那一周课表没有课
+                    starttime += timedelta(days=7)
+    except Exception as e:
+        raise e
+        # return restful.server_error(message='查找课程时出现了异常')
 
     return jsonify({'code': 200, 'data': lessons})
 
