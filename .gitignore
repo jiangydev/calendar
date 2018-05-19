@@ -11,3 +11,6 @@ config.py
 *.egg-info
 dist
 build
+
+# 忽略python编译文件
+__pycache__/
