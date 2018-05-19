@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cabfbcf0-5c47-4a46-85f7-468dd10746fb" name="Default" comment="feat[classSchedule]:">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/front/views.py" afterPath="$PROJECT_DIR$/apps/front/views.py" />
-      <change beforePath="$PROJECT_DIR$/static/front/css/front_signbase.css" afterPath="$PROJECT_DIR$/static/front/css/front_signbase.css" />
-      <change beforePath="$PROJECT_DIR$/static/front/js/front_index.js" afterPath="$PROJECT_DIR$/static/front/js/front_index.js" />
-      <change beforePath="$PROJECT_DIR$/static/front/js/front_settings.js" afterPath="$PROJECT_DIR$/static/front/js/front_settings.js" />
-      <change beforePath="$PROJECT_DIR$/templates/front/front_index.html" afterPath="$PROJECT_DIR$/templates/front/front_index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/front/front_settings.html" afterPath="$PROJECT_DIR$/templates/front/front_settings.html" />
-      <change beforePath="$PROJECT_DIR$/templates/front/front_signbase.html" afterPath="$PROJECT_DIR$/templates/front/front_signbase.html" />
-      <change beforePath="$PROJECT_DIR$/utils/cal_weekday.py" afterPath="$PROJECT_DIR$/utils/cal_weekday.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/Calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Calendar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/classUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/classUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/zlcache.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/zlcache.py" afterDir="false" />
     </list>
     <ignored path="config.py" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/calendar$calendar.coverage" NAME="calendar Coverage Results" MODIFIED="1522993852923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Calendar$views.coverage" NAME="views Coverage Results" MODIFIED="1525696952646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/front" />
-    <SUITE FILE_PATH="coverage/Calendar$cal_weekday.coverage" NAME="cal_weekday Coverage Results" MODIFIED="1526118513142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/calendar$a.coverage" NAME="a Coverage Results" MODIFIED="1522994173525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Calendar$Calendar.coverage" NAME="Calendar Coverage Results" MODIFIED="1526669106972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Calendar$manage.coverage" NAME="manage Coverage Results" MODIFIED="1523188546056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Calendar$Calendar.coverage" NAME="Calendar Coverage Results" MODIFIED="1526285817733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/calendar$a.coverage" NAME="a Coverage Results" MODIFIED="1522994173525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Calendar$cal_weekday.coverage" NAME="cal_weekday Coverage Results" MODIFIED="1526118513142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/calendar$calendar.coverage" NAME="calendar Coverage Results" MODIFIED="1522993852923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/calendar$myCalendar.coverage" NAME="myCalendar Coverage Results" MODIFIED="1522994186510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -36,8 +32,8 @@
           <file leaf-file-name="exts.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/exts.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state relative-caret-position="198">
+                  <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
                   <folding>
                     <element signature="e#18#57#0" expanded="true" />
                   </folding>
@@ -45,36 +41,45 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/front/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1587">
-                  <caret line="475" column="53" lean-forward="true" selection-start-line="475" selection-start-column="53" selection-end-line="475" selection-end-column="53" />
+                <state relative-caret-position="392">
+                  <caret line="362" column="31" lean-forward="true" selection-start-line="362" selection-start-column="31" selection-end-line="362" selection-end-column="31" />
                   <folding>
                     <element signature="e#18#144#0" expanded="true" />
-                    <element signature="e#769#817#0" expanded="false" />
-                    <element signature="e#819#837#1" expanded="false" />
-                    <element signature="e#878#1663#0" expanded="false" />
-                    <element signature="e#1723#2973#0" expanded="false" />
-                    <element signature="e#1746#2293#0" expanded="false" />
-                    <element signature="e#2323#2973#0" expanded="false" />
-                    <element signature="e#3050#3342#0" expanded="false" />
-                    <element signature="e#3420#4285#0" expanded="false" />
-                    <element signature="e#4348#4738#0" expanded="false" />
-                    <element signature="e#4980#5231#0" expanded="false" />
-                    <element signature="e#6076#11618#0" expanded="false" />
-                    <element signature="e#7352#7658#1" expanded="false" />
-                    <element signature="e#7714#9537#0" expanded="false" />
-                    <element signature="e#7904#8934#0" expanded="false" />
-                    <element signature="e#9663#10113#0" expanded="false" />
-                    <element signature="e#10398#10870#0" expanded="false" />
-                    <element signature="e#10913#11345#0" expanded="false" />
-                    <element signature="e#10942#11190#0" expanded="false" />
-                    <element signature="e#11696#15867#0" expanded="false" />
-                    <element signature="e#12083#13043#0" expanded="false" />
-                    <element signature="e#13092#13308#1" expanded="false" />
-                    <element signature="e#15955#16214#0" expanded="false" />
+                    <element signature="e#769#817#0" />
+                    <element signature="e#819#837#1" />
+                    <element signature="e#878#1663#0" />
+                    <element signature="e#1723#2973#0" />
+                    <element signature="e#1746#2293#0" />
+                    <element signature="e#2323#2973#0" />
+                    <element signature="e#3050#3342#0" />
+                    <element signature="e#3420#4285#0" />
+                    <element signature="e#4348#4738#0" />
+                    <element signature="e#4906#5886#0" />
+                    <element signature="e#4980#5231#0" />
+                    <element signature="e#6076#11618#0" />
+                    <element signature="e#7352#7658#1" />
+                    <element signature="e#7714#9537#0" />
+                    <element signature="e#7904#8934#0" />
+                    <element signature="e#9663#10113#0" />
+                    <element signature="e#10398#10870#0" />
+                    <element signature="e#10913#11345#0" />
+                    <element signature="e#10942#11190#0" />
+                    <element signature="e#12083#13043#0" />
+                    <element signature="e#13092#13308#1" />
+                    <element signature="e#15955#16214#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="classUtils.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/classUtils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -82,9 +87,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/front/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1081">
-                  <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-                  <folding />
+                <state relative-caret-position="819">
+                  <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -92,52 +96,11 @@
           <file leaf-file-name="Calendar.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Calendar.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
-                  <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                <state relative-caret-position="330">
+                  <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
                   <folding>
                     <element signature="e#17#40#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
-                  <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#312#1832#0" expanded="false" />
-                    <element signature="e#2215#5855#0" expanded="false" />
-                    <element signature="e#3962#4199#0" expanded="false" />
-                    <element signature="e#4260#5334#0" expanded="false" />
-                    <element signature="e#4260#4864#1" expanded="false" />
-                    <element signature="e#5385#5855#0" expanded="false" />
-                    <element signature="e#5385#5514#1" expanded="false" />
-                    <element signature="e#5966#6054#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="front_index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/front/front_index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-                  <folding>
-                    <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="front_settings.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/front/front_settings.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="115">
-                  <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -146,176 +109,15 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="front_settings.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/front/js/front_settings.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1265">
-                  <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="front_signin.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/front/front_signin.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="front_signbase.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/front/front_signbase.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
-                  <caret line="6" column="72" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="72" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="front_index.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/front/js/front_index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#14#59#0" expanded="false" />
-                    <element signature="e#63#106#0" expanded="false" />
-                    <element signature="n#!!doc;n#init_plugins#0" expanded="false" />
-                    <element signature="e#871#897#0" expanded="false" />
-                    <element signature="e#952#978#0" expanded="false" />
-                    <element signature="e#1306#1333#0" expanded="false" />
-                    <element signature="e#1410#1584#0" expanded="false" />
-                    <element signature="e#1436#1574#0" expanded="false" />
-                    <element signature="e#1506#1560#0" expanded="false" />
-                    <element signature="e#1819#2048#0" expanded="false" />
-                    <element signature="e#2072#4318#0" expanded="false" />
-                    <element signature="n#!!block;n#mobiscroll_init#0" expanded="false" />
-                    <element signature="e#4587#4835#0" expanded="false" />
-                    <element signature="e#4879#5129#0" expanded="false" />
-                    <element signature="e#4936#4977#0" expanded="false" />
-                    <element signature="n#!!doc;n#bind_functions#0" expanded="false" />
-                    <element signature="n#!!block;n#bind_functions#0" expanded="false" />
-                    <element signature="e#5250#5261#0" expanded="false" />
-                    <element signature="e#5319#5401#0" expanded="false" />
-                    <element signature="e#5407#5414#0" expanded="false" />
-                    <element signature="e#5480#5533#0" expanded="false" />
-                    <element signature="e#5584#5791#0" expanded="false" />
-                    <element signature="e#5798#5831#0" expanded="false" />
-                    <element signature="e#5905#5946#0" expanded="false" />
-                    <element signature="e#6006#6047#0" expanded="false" />
-                    <element signature="e#6056#6077#0" expanded="false" />
-                    <element signature="e#6163#6342#0" expanded="false" />
-                    <element signature="e#6298#6336#0" expanded="false" />
-                    <element signature="e#6420#6618#0" expanded="false" />
-                    <element signature="e#6574#6612#0" expanded="false" />
-                    <element signature="e#6698#6897#0" expanded="false" />
-                    <element signature="e#6853#6891#0" expanded="false" />
-                    <element signature="e#6979#7173#0" expanded="false" />
-                    <element signature="e#7129#7167#0" expanded="false" />
-                    <element signature="e#7436#7488#0" expanded="false" />
-                    <element signature="n#!!doc;n#showFab#0" expanded="false" />
-                    <element signature="n#!!block;n#showFab#0" expanded="false" />
-                    <element signature="e#7577#7625#0" expanded="false" />
-                    <element signature="n#!!block;n#hideFab#0" expanded="false" />
-                    <element signature="e#7683#7731#0" expanded="false" />
-                    <element signature="n#!!doc;n#deviceType#0" expanded="false" />
-                    <element signature="n#!!doc;n#showSidebar#0" expanded="false" />
-                    <element signature="n#!!block;n#showSidebar#0" expanded="false" />
-                    <element signature="n#!!doc;n#hideSidebar#0" expanded="false" />
-                    <element signature="n#!!block;n#hideSidebar#0" expanded="false" />
-                    <element signature="n#!!doc;n#showList#0" expanded="false" />
-                    <element signature="n#!!block;n#showList#0" expanded="false" />
-                    <element signature="e#8653#8682#0" expanded="false" />
-                    <element signature="n#!!doc;n#hideList#0" expanded="false" />
-                    <element signature="n#!!block;n#hideList#0" expanded="false" />
-                    <element signature="n#!!doc;n#initCalendar#0" expanded="false" />
-                    <element signature="e#9136#9255#0" expanded="false" />
-                    <element signature="e#9192#9248#0" expanded="false" />
-                    <element signature="n#!!doc;n#initSchedule#0" expanded="false" />
-                    <element signature="n#!!block;n#initSchedule#0" expanded="false" />
-                    <element signature="n#!!doc;n#ifsidebarBtn#0" expanded="false" />
-                    <element signature="n#!!block;n#ifsidebarBtn#0" expanded="false" />
-                    <element signature="e#9786#9886#0" expanded="false" />
-                    <element signature="e#9803#9880#0" expanded="false" />
-                    <element signature="e#9892#9996#0" expanded="false" />
-                    <element signature="e#9909#9990#0" expanded="false" />
-                    <element signature="e#10003#10053#0" expanded="false" />
-                    <element signature="n#!!doc;n#clearForm#0" expanded="false" />
-                    <element signature="n#!!block;n#clearForm#0" expanded="false" />
-                    <element signature="e#10938#11407#0" expanded="false" />
-                    <element signature="e#11413#11834#0" expanded="false" />
-                    <element signature="n#!!doc;n#AjaxAddTask#0" expanded="false" />
-                    <element signature="n#!!block;n#AjaxAddTask#0" expanded="false" />
-                    <element signature="e#12606#12619#0" expanded="false" />
-                    <element signature="e#12689#13120#0" expanded="false" />
-                    <element signature="e#13167#13608#0" expanded="false" />
-                    <element signature="e#13640#14411#0" expanded="false" />
-                    <element signature="e#13678#14020#0" expanded="false" />
-                    <element signature="e#14057#14318#0" expanded="false" />
-                    <element signature="e#14097#14235#0" expanded="false" />
-                    <element signature="e#14241#14308#0" expanded="false" />
-                    <element signature="e#14353#14405#0" expanded="false" />
-                    <element signature="n#!!doc;n#AjaxGetTasks#0" expanded="false" />
-                    <element signature="n#!!block;n#AjaxGetTasks#0" expanded="false" />
-                    <element signature="e#14520#14925#0" expanded="false" />
-                    <element signature="e#14583#14791#0" expanded="false" />
-                    <element signature="e#14623#14716#0" expanded="false" />
-                    <element signature="e#14722#14781#0" expanded="false" />
-                    <element signature="e#14826#14919#0" expanded="false" />
-                    <element signature="n#!!block;n#AjaxDeleteTask#0" expanded="false" />
-                    <element signature="e#15122#15714#0" expanded="false" />
-                    <element signature="e#15183#15707#0" expanded="false" />
-                    <element signature="e#15300#15598#0" expanded="false" />
-                    <element signature="e#15344#15493#0" expanded="false" />
-                    <element signature="e#15499#15584#0" expanded="false" />
-                    <element signature="e#15637#15697#0" expanded="false" />
-                    <element signature="e#15719#15779#0" expanded="false" />
-                    <element signature="e#15784#15820#0" expanded="false" />
-                    <element signature="n#!!doc;n#factory_listLi#0" expanded="false" />
-                    <element signature="n#!!block;n#factory_listLi#0" expanded="false" />
-                    <element signature="n#!!doc;n#render_listItems#0" expanded="false" />
-                    <element signature="n#!!block;n#render_listItems#0" expanded="false" />
-                    <element signature="e#17104#17162#0" expanded="false" />
-                    <element signature="n#!!doc;n#render_list#0" expanded="false" />
-                    <element signature="n#!!block;n#render_list#0" expanded="false" />
-                    <element signature="n#!!doc;n#iso2timeStr#0" expanded="false" />
-                    <element signature="n#!!block;n#iso2timeStr#0" expanded="false" />
-                    <element signature="e#17770#17820#0" expanded="false" />
-                    <element signature="e#17826#17851#0" expanded="false" />
-                    <element signature="n#!!doc;n#str2bool#0" expanded="false" />
-                    <element signature="n#!!block;n#str2bool#0" expanded="false" />
-                    <element signature="n#!!doc;n#render_desc#0" expanded="false" />
-                    <element signature="n#!!block;n#render_desc#0" expanded="false" />
-                    <element signature="e#18356#19075#0" expanded="false" />
-                    <element signature="e#19081#19864#0" expanded="false" />
-                    <element signature="n#!!doc;n#bind_render_desc#0" expanded="false" />
-                    <element signature="n#!!block;n#bind_render_desc#0" expanded="false" />
-                    <marker date="1526294522863" expanded="false" signature="15991:15998" ph="×" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="610">
-                  <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cal_weekday.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/cal_weekday.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="47" />
-                  <folding />
+                <state relative-caret-position="264">
+                  <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#906#910#0" />
+                    <element signature="e#1812#2310#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -356,6 +158,7 @@
       <find>$list.find('.c</find>
       <find>$modal_close</find>
       <find>total_se</find>
+      <find>mongo</find>
     </findStrings>
     <replaceStrings>
       <replace>col-xs</replace>
@@ -393,18 +196,19 @@
         <option value="$PROJECT_DIR$/Calendar.py" />
         <option value="$PROJECT_DIR$/exts.py" />
         <option value="$PROJECT_DIR$/utils/ruokuai.py" />
-        <option value="$PROJECT_DIR$/utils/classUtils.py" />
         <option value="$PROJECT_DIR$/static/front/css/front_index.css" />
         <option value="$PROJECT_DIR$/apps/front/forms.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/utils/cal_weekday.py" />
-        <option value="$PROJECT_DIR$/apps/front/views.py" />
         <option value="$PROJECT_DIR$/templates/front/front_settings.html" />
         <option value="$PROJECT_DIR$/static/front/js/front_settings.js" />
         <option value="$PROJECT_DIR$/templates/front/front_index.html" />
         <option value="$PROJECT_DIR$/templates/front/front_signbase.html" />
         <option value="$PROJECT_DIR$/static/front/css/front_signbase.css" />
         <option value="$PROJECT_DIR$/static/front/js/front_index.js" />
+        <option value="$PROJECT_DIR$/utils/zlcache.py" />
+        <option value="$PROJECT_DIR$/apps/front/views.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/utils/classUtils.py" />
       </list>
     </option>
   </component>
@@ -414,27 +218,20 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1596" />
-    <option name="y" value="38" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
+    <navigator proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -444,86 +241,30 @@
           <expand>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="forms.py" type="8704e2dd:PyFileNode" />
             </path>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="models.py" type="8704e2dd:PyFileNode" />
             </path>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="sweetalert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="Calendar.py" type="8704e2dd:PyFileNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Calendar" type="b2602c69:ProjectViewProjectNode" />
@@ -533,16 +274,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="deviceT&#9;null&#9;null&#10;initC&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -572,6 +312,7 @@
   </component>
   <component name="RunManager" selected="Python.Calendar">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -582,8 +323,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="TARGET" value="" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -591,32 +331,31 @@
       <option name="OPTIONS" value="" />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
     </configuration>
     <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
     </configuration>
     <configuration name="Calendar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -627,8 +366,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calendar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -636,6 +374,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="cal_weekday" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -646,8 +385,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/cal_weekday.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -655,6 +393,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="calendar" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -665,8 +404,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="F:\workspace\calendar\Calendar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -674,6 +412,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -684,8 +423,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="create_task -t test -u easy88866" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -693,6 +431,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="myCalendar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -703,8 +442,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="F:\workspace\calendar\Calendar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -712,6 +450,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -722,8 +461,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/front/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -731,59 +469,26 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="calendar" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -793,56 +498,80 @@
       <option name="USE_PATTERN" value="false" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_regexPattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <module name="calendar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="calendar" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.calendar" />
-      <item index="1" class="java.lang.String" itemvalue="Python.myCalendar" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Calendar" />
-      <item index="3" class="java.lang.String" itemvalue="Python.manage" />
-      <item index="4" class="java.lang.String" itemvalue="Python.views" />
-      <item index="5" class="java.lang.String" itemvalue="Python.cal_weekday" />
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.calendar" />
+      <item itemvalue="Python.myCalendar" />
+      <item itemvalue="Python.Calendar" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python.views" />
+      <item itemvalue="Python.cal_weekday" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Calendar" />
-        <item index="1" class="java.lang.String" itemvalue="Python.cal_weekday" />
-        <item index="2" class="java.lang.String" itemvalue="Python.views" />
-        <item index="3" class="java.lang.String" itemvalue="Python.manage" />
-        <item index="4" class="java.lang.String" itemvalue="Python.myCalendar" />
+      <list>
+        <item itemvalue="Python.Calendar" />
+        <item itemvalue="Python.cal_weekday" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.manage" />
+        <item itemvalue="Python.myCalendar" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -882,30 +611,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1059" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6125934" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24866596" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4108858" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1391258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32337245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32977587" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32977587" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.6125934" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.33187294" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.41073385" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18249734" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.32337245" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" visible="true" weight="0.32977587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -998,137 +729,238 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/front/js/front_signin.js">
+    <entry file="file://$PROJECT_DIR$/static/front/js/front_settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1155">
+          <caret line="55" selection-start-line="55" selection-end-line="57" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/common/fullcalendar/fullcalendar.min.js">
+    <entry file="file://$PROJECT_DIR$/templates/front/front_signin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/数据库设计初稿.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/templates/front/front_signbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="72" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding>
+            <element signature="e#906#910#0" />
+            <element signature="e#1812#2310#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/cal_weekday.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/front/js/front_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#59#0" />
+            <element signature="e#63#106#0" />
+            <element signature="n#!!doc;n#init_plugins#0" />
+            <element signature="e#871#897#0" />
+            <element signature="e#952#978#0" />
+            <element signature="e#1306#1333#0" />
+            <element signature="e#1410#1584#0" />
+            <element signature="e#1436#1574#0" />
+            <element signature="e#1506#1560#0" />
+            <element signature="e#1819#2048#0" />
+            <element signature="e#2072#4318#0" />
+            <element signature="n#!!block;n#mobiscroll_init#0" />
+            <element signature="e#4587#4835#0" />
+            <element signature="e#4879#5129#0" />
+            <element signature="e#4936#4977#0" />
+            <element signature="n#!!doc;n#bind_functions#0" />
+            <element signature="n#!!block;n#bind_functions#0" />
+            <element signature="e#5250#5261#0" />
+            <element signature="e#5319#5401#0" />
+            <element signature="e#5407#5414#0" />
+            <element signature="e#5480#5533#0" />
+            <element signature="e#5584#5791#0" />
+            <element signature="e#5798#5831#0" />
+            <element signature="e#5905#5946#0" />
+            <element signature="e#6006#6047#0" />
+            <element signature="e#6056#6077#0" />
+            <element signature="e#6163#6342#0" />
+            <element signature="e#6298#6336#0" />
+            <element signature="e#6420#6618#0" />
+            <element signature="e#6574#6612#0" />
+            <element signature="e#6698#6897#0" />
+            <element signature="e#6853#6891#0" />
+            <element signature="e#6979#7173#0" />
+            <element signature="e#7129#7167#0" />
+            <element signature="e#7436#7488#0" />
+            <element signature="n#!!doc;n#showFab#0" />
+            <element signature="n#!!block;n#showFab#0" />
+            <element signature="e#7577#7625#0" />
+            <element signature="n#!!block;n#hideFab#0" />
+            <element signature="e#7683#7731#0" />
+            <element signature="n#!!doc;n#deviceType#0" />
+            <element signature="n#!!doc;n#showSidebar#0" />
+            <element signature="n#!!block;n#showSidebar#0" />
+            <element signature="n#!!doc;n#hideSidebar#0" />
+            <element signature="n#!!block;n#hideSidebar#0" />
+            <element signature="n#!!doc;n#showList#0" />
+            <element signature="n#!!block;n#showList#0" />
+            <element signature="e#8653#8682#0" />
+            <element signature="n#!!doc;n#hideList#0" />
+            <element signature="n#!!block;n#hideList#0" />
+            <element signature="n#!!doc;n#initCalendar#0" />
+            <element signature="e#9136#9255#0" />
+            <element signature="e#9192#9248#0" />
+            <element signature="n#!!doc;n#initSchedule#0" />
+            <element signature="n#!!block;n#initSchedule#0" />
+            <element signature="n#!!doc;n#ifsidebarBtn#0" />
+            <element signature="n#!!block;n#ifsidebarBtn#0" />
+            <element signature="e#9786#9886#0" />
+            <element signature="e#9803#9880#0" />
+            <element signature="e#9892#9996#0" />
+            <element signature="e#9909#9990#0" />
+            <element signature="e#10003#10053#0" />
+            <element signature="n#!!doc;n#clearForm#0" />
+            <element signature="n#!!block;n#clearForm#0" />
+            <element signature="e#10938#11407#0" />
+            <element signature="e#11413#11834#0" />
+            <element signature="n#!!doc;n#AjaxAddTask#0" />
+            <element signature="n#!!block;n#AjaxAddTask#0" />
+            <element signature="e#12606#12619#0" />
+            <element signature="e#12689#13120#0" />
+            <element signature="e#13167#13608#0" />
+            <element signature="e#13640#14411#0" />
+            <element signature="e#13678#14020#0" />
+            <element signature="e#14057#14318#0" />
+            <element signature="e#14097#14235#0" />
+            <element signature="e#14241#14308#0" />
+            <element signature="e#14353#14405#0" />
+            <element signature="n#!!doc;n#AjaxGetTasks#0" />
+            <element signature="n#!!block;n#AjaxGetTasks#0" />
+            <element signature="e#14520#14925#0" />
+            <element signature="e#14583#14791#0" />
+            <element signature="e#14623#14716#0" />
+            <element signature="e#14722#14781#0" />
+            <element signature="e#14826#14919#0" />
+            <element signature="n#!!block;n#AjaxDeleteTask#0" />
+            <element signature="e#15122#15714#0" />
+            <element signature="e#15183#15707#0" />
+            <element signature="e#15300#15598#0" />
+            <element signature="e#15344#15493#0" />
+            <element signature="e#15499#15584#0" />
+            <element signature="e#15637#15697#0" />
+            <element signature="e#15719#15779#0" />
+            <element signature="e#15784#15820#0" />
+            <element signature="e#139#146#1" expanded="true" />
+            <element signature="n#!!doc;n#factory_listLi#0" />
+            <element signature="n#!!block;n#factory_listLi#0" />
+            <element signature="n#!!doc;n#render_listItems#0" />
+            <element signature="n#!!block;n#render_listItems#0" />
+            <element signature="e#17104#17162#0" />
+            <element signature="n#!!doc;n#render_list#0" />
+            <element signature="n#!!block;n#render_list#0" />
+            <element signature="n#!!doc;n#iso2timeStr#0" />
+            <element signature="n#!!block;n#iso2timeStr#0" />
+            <element signature="e#17770#17820#0" />
+            <element signature="e#17826#17851#0" />
+            <element signature="n#!!doc;n#str2bool#0" />
+            <element signature="n#!!block;n#str2bool#0" />
+            <element signature="n#!!doc;n#render_desc#0" />
+            <element signature="n#!!block;n#render_desc#0" />
+            <element signature="e#18356#19075#0" />
+            <element signature="e#19081#19864#0" />
+            <element signature="n#!!doc;n#bind_render_desc#0" />
+            <element signature="n#!!block;n#bind_render_desc#0" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/Wiki.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/wtforms/fields/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="683" column="6" lean-forward="false" selection-start-line="683" selection-start-column="6" selection-end-line="683" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/css/front_base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/wtforms/fields/core.py" />
     <entry file="file://$PROJECT_DIR$/templates/common/_macros.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/common/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1501728914/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="198" column="4" lean-forward="false" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1501728914/time.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
-          <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/common/labelauty/jquery-labelauty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3703">
-          <caret line="201" column="38" lean-forward="false" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
+          <caret line="201" column="38" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/common/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/globals.py" />
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/wtforms/validators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/wtforms/validators.py" />
     <entry file="file://$PROJECT_DIR$/utils/restful.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/css/front_settings.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1139,26 +971,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="144" column="4" lean-forward="false" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/helpers.py" />
     <entry file="file://$PROJECT_DIR$/static/common/zlparam.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/zlcache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1166,9 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding>
-            <element signature="e#18#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,156 +990,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#18#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/ruokuai.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="60" column="125" lean-forward="false" selection-start-line="60" selection-start-column="125" selection-end-line="60" selection-end-column="125" />
-          <folding>
-            <element signature="e#56#71#0" expanded="false" />
-          </folding>
+          <caret line="60" column="125" selection-start-line="60" selection-start-column="125" selection-end-line="60" selection-end-column="125" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask_pymongo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="299" column="8" lean-forward="false" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask_pymongo/__init__.py" />
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/views.py" />
     <entry file="file://$PROJECT_DIR$/static/front/css/front_index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="209" column="15" lean-forward="false" selection-start-line="209" selection-start-column="15" selection-end-line="209" selection-end-column="15" />
+          <caret line="209" column="15" selection-start-line="209" selection-start-column="15" selection-end-line="209" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/__init__.py" />
     <entry file="file://$PROJECT_DIR$/static/common/sweetalert/zlalert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-161">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/classUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="59" column="49" lean-forward="false" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
-          <folding>
-            <element signature="e#18#37#0" expanded="false" />
-            <element signature="e#4944#7945#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/blueprints.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="1712" column="8" lean-forward="false" selection-start-line="1712" selection-start-column="8" selection-end-line="1712" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="1611" column="0" lean-forward="false" selection-start-line="1611" selection-start-column="0" selection-end-line="1611" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/cal_weekday.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/js/front_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/blueprints.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/datetime.py" />
+    <entry file="file://$USER_HOME$/Envs/flask/Lib/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/templates/front/front_signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1081">
-          <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/front_signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1333,214 +1031,274 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/front/js/front_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1384">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#59#0" />
+            <element signature="e#63#106#0" />
+            <element signature="n#!!doc;n#init_plugins#0" />
+            <element signature="e#871#897#0" />
+            <element signature="e#952#978#0" />
+            <element signature="e#1306#1333#0" />
+            <element signature="e#1410#1584#0" />
+            <element signature="e#1436#1574#0" />
+            <element signature="e#1506#1560#0" />
+            <element signature="e#1819#2048#0" />
+            <element signature="e#2072#4318#0" />
+            <element signature="n#!!block;n#mobiscroll_init#0" />
+            <element signature="e#4587#4835#0" />
+            <element signature="e#4879#5129#0" />
+            <element signature="e#4936#4977#0" />
+            <element signature="n#!!doc;n#bind_functions#0" />
+            <element signature="n#!!block;n#bind_functions#0" />
+            <element signature="e#5250#5261#0" />
+            <element signature="e#5319#5401#0" />
+            <element signature="e#5407#5414#0" />
+            <element signature="e#5480#5533#0" />
+            <element signature="e#5584#5791#0" />
+            <element signature="e#5798#5831#0" />
+            <element signature="e#5905#5946#0" />
+            <element signature="e#6006#6047#0" />
+            <element signature="e#6056#6077#0" />
+            <element signature="e#6163#6342#0" />
+            <element signature="e#6298#6336#0" />
+            <element signature="e#6420#6618#0" />
+            <element signature="e#6574#6612#0" />
+            <element signature="e#6698#6897#0" />
+            <element signature="e#6853#6891#0" />
+            <element signature="e#6979#7173#0" />
+            <element signature="e#7129#7167#0" />
+            <element signature="e#7436#7488#0" />
+            <element signature="n#!!doc;n#showFab#0" />
+            <element signature="n#!!block;n#showFab#0" />
+            <element signature="e#7577#7625#0" />
+            <element signature="n#!!block;n#hideFab#0" />
+            <element signature="e#7683#7731#0" />
+            <element signature="n#!!doc;n#deviceType#0" />
+            <element signature="n#!!doc;n#showSidebar#0" />
+            <element signature="n#!!block;n#showSidebar#0" />
+            <element signature="n#!!doc;n#hideSidebar#0" />
+            <element signature="n#!!block;n#hideSidebar#0" />
+            <element signature="n#!!doc;n#showList#0" />
+            <element signature="n#!!block;n#showList#0" />
+            <element signature="e#8653#8682#0" />
+            <element signature="n#!!doc;n#hideList#0" />
+            <element signature="n#!!block;n#hideList#0" />
+            <element signature="n#!!doc;n#initCalendar#0" />
+            <element signature="e#9136#9255#0" />
+            <element signature="e#9192#9248#0" />
+            <element signature="n#!!doc;n#initSchedule#0" />
+            <element signature="n#!!block;n#initSchedule#0" />
+            <element signature="n#!!doc;n#ifsidebarBtn#0" />
+            <element signature="n#!!block;n#ifsidebarBtn#0" />
+            <element signature="e#9786#9886#0" />
+            <element signature="e#9803#9880#0" />
+            <element signature="e#9892#9996#0" />
+            <element signature="e#9909#9990#0" />
+            <element signature="e#10003#10053#0" />
+            <element signature="n#!!doc;n#clearForm#0" />
+            <element signature="n#!!block;n#clearForm#0" />
+            <element signature="e#10938#11407#0" />
+            <element signature="e#11413#11834#0" />
+            <element signature="n#!!doc;n#AjaxAddTask#0" />
+            <element signature="n#!!block;n#AjaxAddTask#0" />
+            <element signature="e#12606#12619#0" />
+            <element signature="e#12689#13120#0" />
+            <element signature="e#13167#13608#0" />
+            <element signature="e#13640#14411#0" />
+            <element signature="e#13678#14020#0" />
+            <element signature="e#14057#14318#0" />
+            <element signature="e#14097#14235#0" />
+            <element signature="e#14241#14308#0" />
+            <element signature="e#14353#14405#0" />
+            <element signature="n#!!doc;n#AjaxGetTasks#0" />
+            <element signature="n#!!block;n#AjaxGetTasks#0" />
+            <element signature="e#14520#14925#0" />
+            <element signature="e#14583#14791#0" />
+            <element signature="e#14623#14716#0" />
+            <element signature="e#14722#14781#0" />
+            <element signature="e#14826#14919#0" />
+            <element signature="n#!!block;n#AjaxDeleteTask#0" />
+            <element signature="e#15122#15714#0" />
+            <element signature="e#15183#15707#0" />
+            <element signature="e#15300#15598#0" />
+            <element signature="e#15344#15493#0" />
+            <element signature="e#15499#15584#0" />
+            <element signature="e#15637#15697#0" />
+            <element signature="e#15719#15779#0" />
+            <element signature="e#15784#15820#0" />
+            <element signature="e#139#146#1" expanded="true" />
+            <element signature="n#!!doc;n#factory_listLi#0" />
+            <element signature="n#!!block;n#factory_listLi#0" />
+            <element signature="n#!!doc;n#render_listItems#0" />
+            <element signature="n#!!block;n#render_listItems#0" />
+            <element signature="e#17104#17162#0" />
+            <element signature="n#!!doc;n#render_list#0" />
+            <element signature="n#!!block;n#render_list#0" />
+            <element signature="n#!!doc;n#iso2timeStr#0" />
+            <element signature="n#!!block;n#iso2timeStr#0" />
+            <element signature="e#17770#17820#0" />
+            <element signature="e#17826#17851#0" />
+            <element signature="n#!!doc;n#str2bool#0" />
+            <element signature="n#!!block;n#str2bool#0" />
+            <element signature="n#!!doc;n#render_desc#0" />
+            <element signature="n#!!block;n#render_desc#0" />
+            <element signature="e#18356#19075#0" />
+            <element signature="e#19081#19864#0" />
+            <element signature="n#!!doc;n#bind_render_desc#0" />
+            <element signature="n#!!block;n#bind_render_desc#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/front_signbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="72" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="6" column="72" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/front_signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/front/js/front_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="55" selection-start-line="55" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/cal_weekday.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/zlcache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="e#29#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/front_settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="-616">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/front_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="126">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <element signature="e#312#1832#0" expanded="false" />
-            <element signature="e#2215#5855#0" expanded="false" />
-            <element signature="e#3962#4199#0" expanded="false" />
-            <element signature="e#4260#5334#0" expanded="false" />
-            <element signature="e#4260#4864#1" expanded="false" />
-            <element signature="e#5385#5855#0" expanded="false" />
-            <element signature="e#5385#5514#1" expanded="false" />
-            <element signature="e#5966#6054#0" expanded="false" />
+            <element signature="e#312#1832#0" />
+            <element signature="e#2215#5855#0" />
+            <element signature="e#3962#4199#0" />
+            <element signature="e#4260#5334#0" />
+            <element signature="e#4260#4864#1" />
+            <element signature="e#5385#5855#0" />
+            <element signature="e#5385#5514#1" />
+            <element signature="e#5966#6054#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/front/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#18#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calendar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#17#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/views.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="475" column="53" lean-forward="true" selection-start-line="475" selection-start-column="53" selection-end-line="475" selection-end-column="53" />
+        <state relative-caret-position="264">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
-            <element signature="e#18#144#0" expanded="true" />
-            <element signature="e#769#817#0" expanded="false" />
-            <element signature="e#819#837#1" expanded="false" />
-            <element signature="e#878#1663#0" expanded="false" />
-            <element signature="e#1723#2973#0" expanded="false" />
-            <element signature="e#1746#2293#0" expanded="false" />
-            <element signature="e#2323#2973#0" expanded="false" />
-            <element signature="e#3050#3342#0" expanded="false" />
-            <element signature="e#3420#4285#0" expanded="false" />
-            <element signature="e#4348#4738#0" expanded="false" />
-            <element signature="e#4980#5231#0" expanded="false" />
-            <element signature="e#6076#11618#0" expanded="false" />
-            <element signature="e#7352#7658#1" expanded="false" />
-            <element signature="e#7714#9537#0" expanded="false" />
-            <element signature="e#7904#8934#0" expanded="false" />
-            <element signature="e#9663#10113#0" expanded="false" />
-            <element signature="e#10398#10870#0" expanded="false" />
-            <element signature="e#10913#11345#0" expanded="false" />
-            <element signature="e#10942#11190#0" expanded="false" />
-            <element signature="e#11696#15867#0" expanded="false" />
-            <element signature="e#12083#13043#0" expanded="false" />
-            <element signature="e#13092#13308#1" expanded="false" />
-            <element signature="e#15955#16214#0" expanded="false" />
+            <element signature="e#906#910#0" />
+            <element signature="e#1812#2310#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/front/js/front_index.js">
+    <entry file="file://$PROJECT_DIR$/apps/front/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="392">
+          <caret line="362" column="31" lean-forward="true" selection-start-line="362" selection-start-column="31" selection-end-line="362" selection-end-column="31" />
           <folding>
-            <element signature="e#14#59#0" expanded="false" />
-            <element signature="e#63#106#0" expanded="false" />
-            <element signature="n#!!doc;n#init_plugins#0" expanded="false" />
-            <element signature="e#871#897#0" expanded="false" />
-            <element signature="e#952#978#0" expanded="false" />
-            <element signature="e#1306#1333#0" expanded="false" />
-            <element signature="e#1410#1584#0" expanded="false" />
-            <element signature="e#1436#1574#0" expanded="false" />
-            <element signature="e#1506#1560#0" expanded="false" />
-            <element signature="e#1819#2048#0" expanded="false" />
-            <element signature="e#2072#4318#0" expanded="false" />
-            <element signature="n#!!block;n#mobiscroll_init#0" expanded="false" />
-            <element signature="e#4587#4835#0" expanded="false" />
-            <element signature="e#4879#5129#0" expanded="false" />
-            <element signature="e#4936#4977#0" expanded="false" />
-            <element signature="n#!!doc;n#bind_functions#0" expanded="false" />
-            <element signature="n#!!block;n#bind_functions#0" expanded="false" />
-            <element signature="e#5250#5261#0" expanded="false" />
-            <element signature="e#5319#5401#0" expanded="false" />
-            <element signature="e#5407#5414#0" expanded="false" />
-            <element signature="e#5480#5533#0" expanded="false" />
-            <element signature="e#5584#5791#0" expanded="false" />
-            <element signature="e#5798#5831#0" expanded="false" />
-            <element signature="e#5905#5946#0" expanded="false" />
-            <element signature="e#6006#6047#0" expanded="false" />
-            <element signature="e#6056#6077#0" expanded="false" />
-            <element signature="e#6163#6342#0" expanded="false" />
-            <element signature="e#6298#6336#0" expanded="false" />
-            <element signature="e#6420#6618#0" expanded="false" />
-            <element signature="e#6574#6612#0" expanded="false" />
-            <element signature="e#6698#6897#0" expanded="false" />
-            <element signature="e#6853#6891#0" expanded="false" />
-            <element signature="e#6979#7173#0" expanded="false" />
-            <element signature="e#7129#7167#0" expanded="false" />
-            <element signature="e#7436#7488#0" expanded="false" />
-            <element signature="n#!!doc;n#showFab#0" expanded="false" />
-            <element signature="n#!!block;n#showFab#0" expanded="false" />
-            <element signature="e#7577#7625#0" expanded="false" />
-            <element signature="n#!!block;n#hideFab#0" expanded="false" />
-            <element signature="e#7683#7731#0" expanded="false" />
-            <element signature="n#!!doc;n#deviceType#0" expanded="false" />
-            <element signature="n#!!doc;n#showSidebar#0" expanded="false" />
-            <element signature="n#!!block;n#showSidebar#0" expanded="false" />
-            <element signature="n#!!doc;n#hideSidebar#0" expanded="false" />
-            <element signature="n#!!block;n#hideSidebar#0" expanded="false" />
-            <element signature="n#!!doc;n#showList#0" expanded="false" />
-            <element signature="n#!!block;n#showList#0" expanded="false" />
-            <element signature="e#8653#8682#0" expanded="false" />
-            <element signature="n#!!doc;n#hideList#0" expanded="false" />
-            <element signature="n#!!block;n#hideList#0" expanded="false" />
-            <element signature="n#!!doc;n#initCalendar#0" expanded="false" />
-            <element signature="e#9136#9255#0" expanded="false" />
-            <element signature="e#9192#9248#0" expanded="false" />
-            <element signature="n#!!doc;n#initSchedule#0" expanded="false" />
-            <element signature="n#!!block;n#initSchedule#0" expanded="false" />
-            <element signature="n#!!doc;n#ifsidebarBtn#0" expanded="false" />
-            <element signature="n#!!block;n#ifsidebarBtn#0" expanded="false" />
-            <element signature="e#9786#9886#0" expanded="false" />
-            <element signature="e#9803#9880#0" expanded="false" />
-            <element signature="e#9892#9996#0" expanded="false" />
-            <element signature="e#9909#9990#0" expanded="false" />
-            <element signature="e#10003#10053#0" expanded="false" />
-            <element signature="n#!!doc;n#clearForm#0" expanded="false" />
-            <element signature="n#!!block;n#clearForm#0" expanded="false" />
-            <element signature="e#10938#11407#0" expanded="false" />
-            <element signature="e#11413#11834#0" expanded="false" />
-            <element signature="n#!!doc;n#AjaxAddTask#0" expanded="false" />
-            <element signature="n#!!block;n#AjaxAddTask#0" expanded="false" />
-            <element signature="e#12606#12619#0" expanded="false" />
-            <element signature="e#12689#13120#0" expanded="false" />
-            <element signature="e#13167#13608#0" expanded="false" />
-            <element signature="e#13640#14411#0" expanded="false" />
-            <element signature="e#13678#14020#0" expanded="false" />
-            <element signature="e#14057#14318#0" expanded="false" />
-            <element signature="e#14097#14235#0" expanded="false" />
-            <element signature="e#14241#14308#0" expanded="false" />
-            <element signature="e#14353#14405#0" expanded="false" />
-            <element signature="n#!!doc;n#AjaxGetTasks#0" expanded="false" />
-            <element signature="n#!!block;n#AjaxGetTasks#0" expanded="false" />
-            <element signature="e#14520#14925#0" expanded="false" />
-            <element signature="e#14583#14791#0" expanded="false" />
-            <element signature="e#14623#14716#0" expanded="false" />
-            <element signature="e#14722#14781#0" expanded="false" />
-            <element signature="e#14826#14919#0" expanded="false" />
-            <element signature="n#!!block;n#AjaxDeleteTask#0" expanded="false" />
-            <element signature="e#15122#15714#0" expanded="false" />
-            <element signature="e#15183#15707#0" expanded="false" />
-            <element signature="e#15300#15598#0" expanded="false" />
-            <element signature="e#15344#15493#0" expanded="false" />
-            <element signature="e#15499#15584#0" expanded="false" />
-            <element signature="e#15637#15697#0" expanded="false" />
-            <element signature="e#15719#15779#0" expanded="false" />
-            <element signature="e#15784#15820#0" expanded="false" />
-            <element signature="n#!!doc;n#factory_listLi#0" expanded="false" />
-            <element signature="n#!!block;n#factory_listLi#0" expanded="false" />
-            <element signature="n#!!doc;n#render_listItems#0" expanded="false" />
-            <element signature="n#!!block;n#render_listItems#0" expanded="false" />
-            <element signature="e#17104#17162#0" expanded="false" />
-            <element signature="n#!!doc;n#render_list#0" expanded="false" />
-            <element signature="n#!!block;n#render_list#0" expanded="false" />
-            <element signature="n#!!doc;n#iso2timeStr#0" expanded="false" />
-            <element signature="n#!!block;n#iso2timeStr#0" expanded="false" />
-            <element signature="e#17770#17820#0" expanded="false" />
-            <element signature="e#17826#17851#0" expanded="false" />
-            <element signature="n#!!doc;n#str2bool#0" expanded="false" />
-            <element signature="n#!!block;n#str2bool#0" expanded="false" />
-            <element signature="n#!!doc;n#render_desc#0" expanded="false" />
-            <element signature="n#!!block;n#render_desc#0" expanded="false" />
-            <element signature="e#18356#19075#0" expanded="false" />
-            <element signature="e#19081#19864#0" expanded="false" />
-            <element signature="n#!!doc;n#bind_render_desc#0" expanded="false" />
-            <element signature="n#!!block;n#bind_render_desc#0" expanded="false" />
-            <marker date="1526294522863" expanded="false" signature="15991:15998" ph="×" />
+            <element signature="e#18#144#0" expanded="true" />
+            <element signature="e#769#817#0" />
+            <element signature="e#819#837#1" />
+            <element signature="e#878#1663#0" />
+            <element signature="e#1723#2973#0" />
+            <element signature="e#1746#2293#0" />
+            <element signature="e#2323#2973#0" />
+            <element signature="e#3050#3342#0" />
+            <element signature="e#3420#4285#0" />
+            <element signature="e#4348#4738#0" />
+            <element signature="e#4906#5886#0" />
+            <element signature="e#4980#5231#0" />
+            <element signature="e#6076#11618#0" />
+            <element signature="e#7352#7658#1" />
+            <element signature="e#7714#9537#0" />
+            <element signature="e#7904#8934#0" />
+            <element signature="e#9663#10113#0" />
+            <element signature="e#10398#10870#0" />
+            <element signature="e#10913#11345#0" />
+            <element signature="e#10942#11190#0" />
+            <element signature="e#12083#13043#0" />
+            <element signature="e#13092#13308#1" />
+            <element signature="e#15955#16214#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/classUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
         </state>
       </provider>
     </entry>

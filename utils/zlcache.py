@@ -6,8 +6,9 @@
 '''
 
 import memcache
+from config import MEMCACHED_INFO
 
-cache = memcache.Client(['127.0.0.1:11211'], debug=True)
+cache = memcache.Client([MEMCACHED_INFO], debug=True)
 
 def set(key, value, timeout=60):
     return cache.set(key, value, timeout)

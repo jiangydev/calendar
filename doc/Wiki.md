@@ -209,7 +209,9 @@
 
 ## 本次修改
 
-1. fix[front]: fix bug that can't close list part with list-close button after adding or deleting task
-2. feat[front]: add function of get and store class schedule
-3. feat[front]: add support for voice input on mobile phone
-4. ​
+
+
+## Bugs
+
+1. 课表验证码图标存放用相对路径会报错，现使用绝对路径，但需要在config文件中指定
+2. calendar界面需要tasks和lessons都请求成功才能渲染日程，但新注册用户没有课表，导致lessons请求失败，致使所有日程都无法渲染

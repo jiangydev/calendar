@@ -57,12 +57,12 @@ class ZhengfangSpider:
         captchaBin = captchaResp.content
         img = Image.open(BytesIO(captchaBin))
         name = str(uuid())
-        img.save('./rc_imgData/' + name + '.gif')
-        im = open('./rc_imgData/' + name + '.gif', 'rb').read()
+        img.save('/home/easy88866/Workspace/calendar/utils/rc_imgData/' + name + '.gif')
+        im = open('/home/easy88866/Workspace/calendar/utils/rc_imgData/' + name + '.gif', 'rb').read()
         # 手动输入验证码
         # captcha = input("input the captcha here: ")
         captcha = rc.rk_create(im, 3040)['Result']
-        os.remove('./rc_imgData/' + name + '.gif')
+        os.remove('/home/easy88866/Workspace/calendar/utils/rc_imgData/' + name + '.gif')
         print('catpcha: ', captcha)
         return captcha
 
