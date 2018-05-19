@@ -175,12 +175,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">description</h4>
+                <h4 class="modal-title i18n" id="myModalLabel" name="description">description</h4>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="modal_name">name</label>
+                        <label for="modal_name" class="i18n" name="title">title</label>
                         <input type="text" class="form-control i18n-placeholder" id="modal_name" name="phname" placeholder="年轻人少熬夜">
                     </div>
                     <div class="settings" style="display:none;">
@@ -190,18 +190,18 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="modal_starttime">from</label>
+                        <label for="modal_starttime" class="i18n" name="from">from</label>
                         <!--class demo-test-datetime为时间选择插件样式类-->
                         <input type="text" class="form-control demo-test-datetime i18n-placeholder" id="modal_starttime" name="phstarttime"
                                placeholder="开始时间">
                     </div>
                     <div class="form-group">
-                        <label for="modal_endtime">to</label>
+                        <label for="modal_endtime" class="i18n" name="to">to</label>
                         <input type="text" class="form-control demo-test-datetime i18n-placeholder" id="modal_endtime" name="phendtime"
                                placeholder="结束时间">
                     </div>
                     <div class="form-group">
-                        <label for="modal_alerttime">reminder</label>
+                        <label for="modal_alerttime" class="i18n" name="reminder">reminder</label>
                         <input type="text" class="form-control demo-test-datetime i18n-placeholder" id="modal_alerttime" name="phalerttime"
                                placeholder="提醒时间">
                     </div>
@@ -213,16 +213,16 @@
                         <input type="checkbox" class="i18n-checkbox" id="modal_finish" name="cbFinish" data-labelauty="unfinishied|finished">
                     </div>
                     <div class="form-group">
-                        <label for="desc_content">content</label>
+                        <label for="desc_content" class="i18n" name="content">content</label>
                         <textarea class="form-control i18n-placeholder" id="modal_content" name="phcontent" rows="10"
                                   placeholder="young man, do not stay up late" style="margin-left: 0"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer" style="overflow: hidden">
-                <button type="button" class="btn btn-danger" id="modal-delete" style="float: left;">delete</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="modal-submit">Save changes</button>
+                <button type="button" class="btn btn-danger i18n" id="modal-delete" name="Delete" style="float: left;">delete</button>
+                <button type="button" class="btn btn-default i18n" data-dismiss="modal" name="Close">Close</button>
+                <button type="button" class="btn btn-primary i18n" id="modal-submit" name="Submit">Save changes</button>
             </div>
         </div>
     </div>
