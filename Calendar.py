@@ -4,7 +4,7 @@ from apps.cms import bp as cms_bp
 from apps.common import bp as common_bp
 from apps.front import bp as front_bp
 import config
-from exts import db, mail, yunpian
+from exts import db, mail, yunpian, mongo
 from flask_wtf import CSRFProtect
 
 def create_app():
@@ -13,6 +13,7 @@ def create_app():
 
     db.init_app(app)
     yunpian.init_app(app)
+    mongo.init_app(app)
     CSRFProtect(app)
 
     app.register_blueprint(cms_bp)
@@ -24,4 +25,6 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
+    # app.run(host='0.0.0.0')
     app.run()
+

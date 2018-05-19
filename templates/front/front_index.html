@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="h4 sidebar_nav_li">
-                            <a href="">
+                            <a href="{{ url_for('front.settings') }}">
                                 <span class="glyphicon glyphicon-user icon"></span>
                                 Setting
                             </a>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="modal-footer" style="overflow: hidden">
                         <button type="button" class="btn btn-danger" id="modal-delete" style="float: left;">delete</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="modal_close">Close</button>
                         <button type="button" class="btn btn-primary" id="modal-submit">Save changes</button>
                     </div>
                 </div>

@@ -17,7 +17,8 @@ var $sidebar = $('.sidebar'),
     $addtask_btn = $('.addtask-btn'), // add task button
     $list_ul = $list.find('ul'), // list中展示task的ul
     $desc_submit = $('#desc-submit'), // desc中提交按钮
-    $modal_submit = $('#modal-submit'); // modal中提交按钮
+    $modal_submit = $('#modal-submit'), // modal中提交按钮
+    $modal_close = $('#modal_close'); // modal中关闭按钮
 
 var deviceType_var = deviceType(),
     tasks = []; // 用于存放tasks
@@ -44,8 +45,15 @@ function init_plugins(){
         themeSystem: 'bootstrap3',
         // 默认视图
         defaultView: 'month',
+        views: {
+            month: {
+                eventLimit: 6
+            }
+        },
         // 视图头部行布局
         header: ifsidebarBtn(),
+        //每周从周一开始, note: 还要设置时区，见文档
+        // fitstDay: 1,
         // 自定义按钮，用于唤出sidebar
         customButtons: {
             sidebarBtn: {
@@ -57,28 +65,80 @@ function init_plugins(){
         },
         // 高度父元素自适应
         height: "parent",
+        // 设置月视图每个空格显示几条tasks，其余隐藏
+        eventLimit: true,
         // 显示当前时间指示器
         nowIndicator: true,
+        // 悬浮或点击会有tooltip显示具体内容
+        eventRender: function(eventObj, $el) {
+            $el.popover({
+              title: eventObj.title,
+              content: eventObj.content,
+              trigger: 'hover',
+              placement: 'top',
+              container: 'body'
+            });
+          },
         eventSources: [
-            // 普通日程
             {
+                id: 'normal',
                 events: function (start, end, timezone, callback) {
-                    zlajax.get({
-                        'url': '/tasks/',
-                        'success': function (data) {
-                            var events = [];
-                            if (data['code'] === 200) {
-                                events = data['data']
-                                callback(events);
-                            } else {
-                                zlalert.alertErrorToast('获取日程失败');
-                            }
-                        },
-                        'fail': function (error) {
-                            zlalert.alertNetworkError();
+                    var events = [];
+                    var normalFinished = 0;
+                    var lessonFinished = 0;
+                    // 课表
+                    zlajax.post({
+                    'url': '/lessons/',
+                    'data': {
+                        // week_of_year-day_of_week
+                        'start': start.format('YYYY-M-D'),
+                        'end': end.format('YYYY-M-D')
+                    },
+                    'success': function (data) {
+                        // var events = [];
+                        if (data['code'] === 200) {
+                            events = events.concat(data['data']);
+                            lessonFinished = 1;
+                            // callback(events);
+                        } else {
+                            zlalert.alertErrorToast('获取课程失败');
                         }
-                    });
+                    },
+                    'fail': function (error) {
+                        zlalert.alertNetworkError();
+                    }
+                });
+
+                    // 普通日程
+                    zlajax.get({
+                    'url': '/tasks/',
+                    'success': function (data) {
+                        // var events = [];
+                        if (data['code'] === 200) {
+                            events = events.concat(data['data']);
+                            normalFinished = 1;
+                            // callback(events);
+                        } else {
+                            zlalert.alertErrorToast('获取日程失败');
+                        }
+                    },
+                    'fail': function (error) {
+                        zlalert.alertNetworkError();
+                    }
+                });
+
+
+                     var intervalId = setInterval(function () {
+                        if (lessonFinished && normalFinished) {
+                            callback(events);
+                            clearInterval(intervalId);
+                            console.log('here finish the request.');
+                        }
+                    }, 100);
+
+
                 }
+
             }
         ]
     });
@@ -146,7 +206,16 @@ function bind_functions() {
 
 
     // 点击addtask_btn,即新建日程前，清空desc中表单
-    $addtask_btn.click(clearForm);
+    // $addtask_btn.click(clearForm);
+    $addtask_btn.click(function () {
+    	clearForm();
+    	showFab();
+    });
+    // 模态框关闭时隐藏语音识别按钮
+    $modal_close.click(function () {
+    	clearForm();
+    	hideFab();
+    });
 
 
     // sidebar磁贴用于不同视图间切换
@@ -201,6 +270,21 @@ function bind_functions() {
 /**
  * ============ 页面变化逻辑函数 ===================
  */
+
+/**
+ * showFab() & hideFab()
+ */
+function showFab() {
+    if (deviceType_var !== 'pc') {
+        $.globalEval(app_obj.showFab());
+    }
+}
+
+function hideFab() {
+    if (deviceType_var !== 'pc') {
+        $.globalEval(app_obj.hideFab());
+    }
+}
 
 /**
  * deviceType()
@@ -268,6 +352,8 @@ function initCalendar() {
     $list.hide();
     $desc.hide();
     $calendar.show();
+    // 同步日程
+    $calendar.fullCalendar('refetchEvents');
     // 在平板/手机尺寸下，点击header->title跳转到today
     if (deviceType_var !== 'pc') {
         $calendar.find('.fc-right').click(function () {
@@ -560,6 +646,7 @@ function render_listItems(tasks) {
 function render_list() {
     $list_ul.text('');
     $list_ul.append($listClose);
+    $list.find('.close').click(hideList);
     AjaxGetTasks(render_listItems);
 }
 
